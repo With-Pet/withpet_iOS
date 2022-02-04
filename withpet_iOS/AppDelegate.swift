@@ -25,7 +25,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             let tabBarAppearance = UITabBarAppearance()
             tabBarAppearance.configureWithDefaultBackground()
             tabBarAppearance.backgroundColor = .white
-        
             UITabBar.appearance().standardAppearance = tabBarAppearance
             UITabBar.appearance().scrollEdgeAppearance = tabBarAppearance
             

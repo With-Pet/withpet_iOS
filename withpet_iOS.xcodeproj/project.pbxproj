@@ -21,6 +21,9 @@
 		78080B0827AA6A340043461C /* PetFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0727AA6A340043461C /* PetFeedCell.swift */; };
 		78080B0B27AA7F690043461C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0A27AA7F690043461C /* FilterViewController.swift */; };
 		78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */; };
+		78131F6127AC248C0003B9F8 /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6027AC248C0003B9F8 /* OwnerViewController.swift */; };
+		78131F6427AC25F60003B9F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6327AC25F60003B9F8 /* Extensions.swift */; };
+		78131F6627AC39A40003B9F8 /* CertificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6527AC39A40003B9F8 /* CertificationView.swift */; };
 		A881FCD7F1CD861940790D92 /* Pods_withpet_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -42,6 +45,9 @@
 		78080B0727AA6A340043461C /* PetFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFeedCell.swift; sourceTree = "<group>"; };
 		78080B0A27AA7F690043461C /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
 		78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListCell.swift; sourceTree = "<group>"; };
+		78131F6027AC248C0003B9F8 /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
+		78131F6327AC25F60003B9F8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		78131F6527AC39A40003B9F8 /* CertificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationView.swift; sourceTree = "<group>"; };
 		B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_withpet_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B999708DD4F9F15E78E5B7B3 /* Pods-withpet_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.release.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -92,6 +98,7 @@
 				78080AE827A831BF0043461C /* SceneDelegate.swift */,
 				78080B0927AA6A390043461C /* View */,
 				78080B0427A835ED0043461C /* Controller */,
+				78131F6227AC25DA0003B9F8 /* Utilities */,
 				78080AEF27A831C20043461C /* Assets.xcassets */,
 				78080AF127A831C20043461C /* LaunchScreen.storyboard */,
 				78080AF427A831C20043461C /* Info.plist */,
@@ -109,7 +116,7 @@
 				78080AFC27A835BE0043461C /* ReservationViewController.swift */,
 				78080AFE27A835CF0043461C /* PostViewController.swift */,
 				78080B0027A835DC0043461C /* ChatViewController.swift */,
-				78080B0227A835E50043461C /* ProfileViewController.swift */,
+				78131F5F27AC24580003B9F8 /* ProfileController */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -119,8 +126,26 @@
 			children = (
 				78080B0727AA6A340043461C /* PetFeedCell.swift */,
 				78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */,
+				78131F6527AC39A40003B9F8 /* CertificationView.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		78131F5F27AC24580003B9F8 /* ProfileController */ = {
+			isa = PBXGroup;
+			children = (
+				78080B0227A835E50043461C /* ProfileViewController.swift */,
+				78131F6027AC248C0003B9F8 /* OwnerViewController.swift */,
+			);
+			path = ProfileController;
+			sourceTree = "<group>";
+		};
+		78131F6227AC25DA0003B9F8 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				78131F6327AC25F60003B9F8 /* Extensions.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		F5CDC302377CE6D4959A56FA /* Frameworks */ = {
@@ -247,12 +272,15 @@
 			files = (
 				78080AFF27A835CF0043461C /* PostViewController.swift in Sources */,
 				78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */,
+				78131F6627AC39A40003B9F8 /* CertificationView.swift in Sources */,
 				78080B0827AA6A340043461C /* PetFeedCell.swift in Sources */,
 				78080AFD27A835BE0043461C /* ReservationViewController.swift in Sources */,
 				78080AEB27A831BF0043461C /* MainTapController.swift in Sources */,
 				78080B0127A835DC0043461C /* ChatViewController.swift in Sources */,
 				78080B0B27AA7F690043461C /* FilterViewController.swift in Sources */,
+				78131F6127AC248C0003B9F8 /* OwnerViewController.swift in Sources */,
 				78080AE727A831BF0043461C /* AppDelegate.swift in Sources */,
+				78131F6427AC25F60003B9F8 /* Extensions.swift in Sources */,
 				78080AFB27A835A40043461C /* FeedViewController.swift in Sources */,
 				78080B0327A835E50043461C /* ProfileViewController.swift in Sources */,
 				78080B0627AA61560043461C /* SearchViewController.swift in Sources */,

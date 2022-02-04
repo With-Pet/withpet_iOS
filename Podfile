@@ -8,4 +8,5 @@ target 'withpet_iOS' do
   # Pods for withpet_iOS
   pod 'SnapKit', '~> 5.0.0'
   pod 'Then'
+  pod 'MaterialComponents/Chips'
 end

@@ -13,7 +13,7 @@ class MainTapController: UITabBarController {
     
     let actionButton = UIButton().then {
         $0.tintColor = .white
-        $0.backgroundColor = .blue
+        $0.backgroundColor = .mainColor
         $0.layer.borderWidth = 2
         $0.layer.borderColor = UIColor.white.cgColor
         $0.setImage(UIImage(systemName: "plus"), for: .normal)
@@ -59,8 +59,8 @@ class MainTapController: UITabBarController {
         setViewControllers([nav1,nav2,nav3,nav4], animated: false)
         
         tabBar.layer.borderWidth = 1
-        tabBar.layer.borderColor = UIColor.lightGray.cgColor
-        tabBar.tintColor = .blue
+        tabBar.layer.borderColor = UIColor.mainColor.cgColor
+        tabBar.tintColor = .mainColor
     }
     
     func templateNavigationController(image: UIImage?,rootViewController: UIViewController) -> UINavigationController{
