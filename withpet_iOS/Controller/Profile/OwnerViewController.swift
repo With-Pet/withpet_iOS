@@ -233,7 +233,7 @@ class OwnerViewController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.barTintColor = .black
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(handleDismissal))
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "outline_settings_black_24pt_1x"), style: .plain, target: self, action: #selector(didTapSetting))
+//        navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "outline_settings_black_24pt_1x"), style: .plain, target: self, action: #selector(didTapSetting))
     }
     
     func configureCollectionView() {
@@ -261,7 +261,7 @@ class OwnerViewController: UIViewController {
     
     @objc func didTapAdd() {
         print("DEBUG : tapped add button")
-        let vc = AddCertificationViewController()
+        let vc = AddCertificationController()
         vc.delegate = self
         present(vc, animated: true, completion:nil)
     }
@@ -285,7 +285,7 @@ extension OwnerViewController : UICollectionViewDelegate,UICollectionViewDataSou
     }
 }
 
-extension OwnerViewController : AddCertificationViewControllerDelegate {
+extension OwnerViewController : AddCertificationControllerDelegate {
     func addCerticiation(CertificationName title: String, CertificationSource source: String, CertificationDate date: Date) {
         print("title : \(title)")
         print("source : \(source)")

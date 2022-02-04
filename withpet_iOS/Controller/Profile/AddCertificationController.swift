@@ -7,14 +7,14 @@
 
 import UIKit
 
-protocol AddCertificationViewControllerDelegate: class {
+protocol AddCertificationControllerDelegate: class {
     func addCerticiation(CertificationName title:String,CertificationSource source: String,CertificationDate date:Date)
 }
 
-class AddCertificationViewController: UIViewController {
+class AddCertificationController: UIViewController {
     
     //MARK: - Properties
-    weak var delegate : AddCertificationViewControllerDelegate?
+    weak var delegate : AddCertificationControllerDelegate?
     private let imagePicker = UIImagePickerController()
     private var certificationImage: UIImage?
     private let datePicker = UIDatePicker()
@@ -183,7 +183,7 @@ class AddCertificationViewController: UIViewController {
 }
 
 //MARK: - UIImagePickerControllerDelegate
-extension AddCertificationViewController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+extension AddCertificationController : UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         

@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "ProfileListCell"
 
-class ProfileViewController : UITableViewController {
+class ProfileController : UITableViewController {
     
     private let list = ["내 프로필","내 반려동물 프로필","찜한 돌봄이","찜한 반려 동물","공지사항","FAQ","환경설정","로그아웃","회원 탈퇴"]
 
@@ -33,11 +33,20 @@ class ProfileViewController : UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.row == 0 {
+        
+        switch indexPath.row {
+        case 0 :
             let ownerVC = UINavigationController(rootViewController: OwnerViewController())
             ownerVC.modalPresentationStyle = .fullScreen
             present(ownerVC, animated: true, completion: nil)
+        case 1:
+            let petProfileVC = UINavigationController(rootViewController: PetProfileController())
+            petProfileVC.modalPresentationStyle = .fullScreen
+            present(petProfileVC, animated: true, completion: nil)
+        default :
+            print("HEllo")
         }
+
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 60
