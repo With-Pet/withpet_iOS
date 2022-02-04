@@ -34,8 +34,9 @@ class ProfileViewController : UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let ownerVC = OwnerViewController()
-            navigationController?.pushViewController(ownerVC, animated: false)
+            let ownerVC = UINavigationController(rootViewController: OwnerViewController())
+            ownerVC.modalPresentationStyle = .fullScreen
+            present(ownerVC, animated: true, completion: nil)
         }
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
