@@ -13,6 +13,7 @@ private let reuseIdentfier = "chipCell"
 class OwnerViewController: UIViewController {
     
     //MARK: - HeaderContainer
+
     private lazy var headerContainerView = UIView().then {
         $0.backgroundColor = .white
         $0.addSubview(profileImageView)
@@ -189,6 +190,7 @@ class OwnerViewController: UIViewController {
     private let addbutton = UIButton().then {
         $0.setImage(UIImage(systemName: "plus"), for: .normal)
         $0.addTarget(self, action: #selector(didTapAdd), for: .touchUpInside)
+        $0.tintColor = .black
     }
     
     //MARK: - Lifecycle
@@ -230,6 +232,7 @@ class OwnerViewController: UIViewController {
         navigationItem.title = "프로필"
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.barTintColor = .black
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(handleDismissal))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "outline_settings_black_24pt_1x"), style: .plain, target: self, action: #selector(didTapSetting))
     }
     
@@ -249,14 +252,19 @@ class OwnerViewController: UIViewController {
     }
     
     //MARK: - selector
+    @objc func handleDismissal(){
+        dismiss(animated: true)
+    }
     @objc func didTapSetting() {
         print("DEBUG : tapped setting button")
     }
     
     @objc func didTapAdd() {
         print("DEBUG : tapped add button")
+        let vc = AddCertificationViewController()
+        vc.delegate = self
+        present(vc, animated: true, completion:nil)
     }
-    
 }
 
 
@@ -277,3 +285,10 @@ extension OwnerViewController : UICollectionViewDelegate,UICollectionViewDataSou
     }
 }
 
+extension OwnerViewController : AddCertificationViewControllerDelegate {
+    func addCerticiation(CertificationName title: String, CertificationSource source: String, CertificationDate date: Date) {
+        print("title : \(title)")
+        print("source : \(source)")
+        print("Date : \(date)")
+    }
+}

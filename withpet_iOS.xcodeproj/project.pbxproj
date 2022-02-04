@@ -24,6 +24,8 @@
 		78131F6127AC248C0003B9F8 /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6027AC248C0003B9F8 /* OwnerViewController.swift */; };
 		78131F6427AC25F60003B9F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6327AC25F60003B9F8 /* Extensions.swift */; };
 		78131F6627AC39A40003B9F8 /* CertificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6527AC39A40003B9F8 /* CertificationView.swift */; };
+		78131F8827AD1B820003B9F8 /* AddCertificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F8727AD1B820003B9F8 /* AddCertificationViewController.swift */; };
+		78131F8A27AD22320003B9F8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F8927AD22320003B9F8 /* Utilities.swift */; };
 		A881FCD7F1CD861940790D92 /* Pods_withpet_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -48,6 +50,8 @@
 		78131F6027AC248C0003B9F8 /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
 		78131F6327AC25F60003B9F8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		78131F6527AC39A40003B9F8 /* CertificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationView.swift; sourceTree = "<group>"; };
+		78131F8727AD1B820003B9F8 /* AddCertificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCertificationViewController.swift; sourceTree = "<group>"; };
+		78131F8927AD22320003B9F8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_withpet_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B999708DD4F9F15E78E5B7B3 /* Pods-withpet_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.release.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -136,6 +140,7 @@
 			children = (
 				78080B0227A835E50043461C /* ProfileViewController.swift */,
 				78131F6027AC248C0003B9F8 /* OwnerViewController.swift */,
+				78131F8727AD1B820003B9F8 /* AddCertificationViewController.swift */,
 			);
 			path = ProfileController;
 			sourceTree = "<group>";
@@ -144,6 +149,7 @@
 			isa = PBXGroup;
 			children = (
 				78131F6327AC25F60003B9F8 /* Extensions.swift */,
+				78131F8927AD22320003B9F8 /* Utilities.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -280,7 +286,9 @@
 				78080B0B27AA7F690043461C /* FilterViewController.swift in Sources */,
 				78131F6127AC248C0003B9F8 /* OwnerViewController.swift in Sources */,
 				78080AE727A831BF0043461C /* AppDelegate.swift in Sources */,
+				78131F8A27AD22320003B9F8 /* Utilities.swift in Sources */,
 				78131F6427AC25F60003B9F8 /* Extensions.swift in Sources */,
+				78131F8827AD1B820003B9F8 /* AddCertificationViewController.swift in Sources */,
 				78080AFB27A835A40043461C /* FeedViewController.swift in Sources */,
 				78080B0327A835E50043461C /* ProfileViewController.swift in Sources */,
 				78080B0627AA61560043461C /* SearchViewController.swift in Sources */,
