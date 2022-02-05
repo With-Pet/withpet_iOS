@@ -10,7 +10,7 @@ import UIKit
 
 private let reuseIdentifier = "ProfileListCell"
 
-class ProfileController : UITableViewController {
+class ProfileListController : UITableViewController {
     
     private let list = ["내 프로필","내 반려동물 프로필","찜한 돌봄이","찜한 반려 동물","공지사항","FAQ","환경설정","로그아웃","회원 탈퇴"]
 
@@ -36,7 +36,7 @@ class ProfileController : UITableViewController {
         
         switch indexPath.row {
         case 0 :
-            let ownerVC = UINavigationController(rootViewController: OwnerViewController())
+            let ownerVC = UINavigationController(rootViewController: OwnerProfileController())
             ownerVC.modalPresentationStyle = .fullScreen
             present(ownerVC, animated: true, completion: nil)
         case 1:

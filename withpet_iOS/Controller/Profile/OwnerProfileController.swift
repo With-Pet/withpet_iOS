@@ -10,7 +10,7 @@ import MaterialComponents.MaterialChips
 import MaterialComponents
 
 private let reuseIdentfier = "chipCell"
-class OwnerViewController: UIViewController {
+class OwnerProfileController: UIViewController {
     
     //MARK: - HeaderContainer
 

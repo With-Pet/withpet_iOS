@@ -53,7 +53,7 @@ class MainTapController: UITabBarController {
         let nav3 = templateNavigationController(image: UIImage(systemName: "message"), rootViewController: chatVC)
         
         
-        let profile = ProfileController()
+        let profile = ProfileListController()
         let nav4 = templateNavigationController(image: UIImage(systemName: "person"), rootViewController: profile)
         
         setViewControllers([nav1,nav2,nav3,nav4], animated: false)

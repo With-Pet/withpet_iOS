@@ -8,7 +8,7 @@
 //import Foundation
 //import UIKit
 //
-//class FileterViewController : UIViewController {
+//class FileterController : UIViewController {
 //    
 //    //MARK: - Properties
 //    private let nameLabel = UILabel().then {

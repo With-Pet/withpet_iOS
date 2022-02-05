@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ReservationViewController: UITableViewController {
+class ReservationController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = .black

@@ -9,7 +9,7 @@ import UIKit
 
 private let reuseIdentifier = "petCell"
 
-class FeedViewController: UITableViewController {
+class FeedController: UITableViewController {
     
     //MARK: - Properties
     private lazy var actionButton = UIButton().then {

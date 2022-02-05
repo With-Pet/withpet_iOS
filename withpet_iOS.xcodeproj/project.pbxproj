@@ -12,16 +12,16 @@
 		78080AEB27A831BF0043461C /* MainTapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AEA27A831BF0043461C /* MainTapController.swift */; };
 		78080AF027A831C20043461C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 78080AEF27A831C20043461C /* Assets.xcassets */; };
 		78080AF327A831C20043461C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78080AF127A831C20043461C /* LaunchScreen.storyboard */; };
-		78080AFB27A835A40043461C /* FeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFA27A835A40043461C /* FeedViewController.swift */; };
-		78080AFD27A835BE0043461C /* ReservationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFC27A835BE0043461C /* ReservationViewController.swift */; };
-		78080AFF27A835CF0043461C /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFE27A835CF0043461C /* PostViewController.swift */; };
-		78080B0127A835DC0043461C /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0027A835DC0043461C /* ChatViewController.swift */; };
-		78080B0327A835E50043461C /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0227A835E50043461C /* ProfileViewController.swift */; };
-		78080B0627AA61560043461C /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0527AA61560043461C /* SearchViewController.swift */; };
+		78080AFB27A835A40043461C /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFA27A835A40043461C /* FeedController.swift */; };
+		78080AFD27A835BE0043461C /* ReservationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFC27A835BE0043461C /* ReservationController.swift */; };
+		78080AFF27A835CF0043461C /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFE27A835CF0043461C /* PostController.swift */; };
+		78080B0127A835DC0043461C /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0027A835DC0043461C /* ChatController.swift */; };
+		78080B0327A835E50043461C /* ProfileListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0227A835E50043461C /* ProfileListController.swift */; };
+		78080B0627AA61560043461C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0527AA61560043461C /* SearchController.swift */; };
 		78080B0827AA6A340043461C /* PetFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0727AA6A340043461C /* PetFeedCell.swift */; };
-		78080B0B27AA7F690043461C /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0A27AA7F690043461C /* FilterViewController.swift */; };
+		78080B0B27AA7F690043461C /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0A27AA7F690043461C /* FilterController.swift */; };
 		78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */; };
-		78131F6127AC248C0003B9F8 /* OwnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6027AC248C0003B9F8 /* OwnerViewController.swift */; };
+		78131F6127AC248C0003B9F8 /* OwnerProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6027AC248C0003B9F8 /* OwnerProfileController.swift */; };
 		78131F6427AC25F60003B9F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6327AC25F60003B9F8 /* Extensions.swift */; };
 		78131F6627AC39A40003B9F8 /* CertificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6527AC39A40003B9F8 /* CertificationView.swift */; };
 		78131F8827AD1B820003B9F8 /* AddCertificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F8727AD1B820003B9F8 /* AddCertificationController.swift */; };
@@ -39,16 +39,16 @@
 		78080AEF27A831C20043461C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		78080AF227A831C20043461C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		78080AF427A831C20043461C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		78080AFA27A835A40043461C /* FeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedViewController.swift; sourceTree = "<group>"; };
-		78080AFC27A835BE0043461C /* ReservationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationViewController.swift; sourceTree = "<group>"; };
-		78080AFE27A835CF0043461C /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
-		78080B0027A835DC0043461C /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
-		78080B0227A835E50043461C /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		78080B0527AA61560043461C /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		78080AFA27A835A40043461C /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
+		78080AFC27A835BE0043461C /* ReservationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationController.swift; sourceTree = "<group>"; };
+		78080AFE27A835CF0043461C /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		78080B0027A835DC0043461C /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
+		78080B0227A835E50043461C /* ProfileListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListController.swift; sourceTree = "<group>"; };
+		78080B0527AA61560043461C /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
 		78080B0727AA6A340043461C /* PetFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFeedCell.swift; sourceTree = "<group>"; };
-		78080B0A27AA7F690043461C /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		78080B0A27AA7F690043461C /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
 		78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListCell.swift; sourceTree = "<group>"; };
-		78131F6027AC248C0003B9F8 /* OwnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerViewController.swift; sourceTree = "<group>"; };
+		78131F6027AC248C0003B9F8 /* OwnerProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileController.swift; sourceTree = "<group>"; };
 		78131F6327AC25F60003B9F8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		78131F6527AC39A40003B9F8 /* CertificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationView.swift; sourceTree = "<group>"; };
 		78131F8727AD1B820003B9F8 /* AddCertificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCertificationController.swift; sourceTree = "<group>"; };
@@ -117,12 +117,12 @@
 			children = (
 				78131F8B27AD44B40003B9F8 /* Authentication */,
 				78080AEA27A831BF0043461C /* MainTapController.swift */,
-				78080AFA27A835A40043461C /* FeedViewController.swift */,
-				78080B0A27AA7F690043461C /* FilterViewController.swift */,
-				78080B0527AA61560043461C /* SearchViewController.swift */,
-				78080AFC27A835BE0043461C /* ReservationViewController.swift */,
-				78080AFE27A835CF0043461C /* PostViewController.swift */,
-				78080B0027A835DC0043461C /* ChatViewController.swift */,
+				78080AFA27A835A40043461C /* FeedController.swift */,
+				78080B0A27AA7F690043461C /* FilterController.swift */,
+				78080B0527AA61560043461C /* SearchController.swift */,
+				78080AFC27A835BE0043461C /* ReservationController.swift */,
+				78080AFE27A835CF0043461C /* PostController.swift */,
+				78080B0027A835DC0043461C /* ChatController.swift */,
 				78131F5F27AC24580003B9F8 /* Profile */,
 			);
 			path = Controller;
@@ -141,8 +141,8 @@
 		78131F5F27AC24580003B9F8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
-				78080B0227A835E50043461C /* ProfileViewController.swift */,
-				78131F6027AC248C0003B9F8 /* OwnerViewController.swift */,
+				78080B0227A835E50043461C /* ProfileListController.swift */,
+				78131F6027AC248C0003B9F8 /* OwnerProfileController.swift */,
 				78131F8727AD1B820003B9F8 /* AddCertificationController.swift */,
 				78131F8C27AD6E820003B9F8 /* PetProfileController.swift */,
 			);
@@ -287,23 +287,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78080AFF27A835CF0043461C /* PostViewController.swift in Sources */,
+				78080AFF27A835CF0043461C /* PostController.swift in Sources */,
 				78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */,
 				78131F6627AC39A40003B9F8 /* CertificationView.swift in Sources */,
 				78080B0827AA6A340043461C /* PetFeedCell.swift in Sources */,
-				78080AFD27A835BE0043461C /* ReservationViewController.swift in Sources */,
+				78080AFD27A835BE0043461C /* ReservationController.swift in Sources */,
 				78080AEB27A831BF0043461C /* MainTapController.swift in Sources */,
-				78080B0127A835DC0043461C /* ChatViewController.swift in Sources */,
-				78080B0B27AA7F690043461C /* FilterViewController.swift in Sources */,
-				78131F6127AC248C0003B9F8 /* OwnerViewController.swift in Sources */,
+				78080B0127A835DC0043461C /* ChatController.swift in Sources */,
+				78080B0B27AA7F690043461C /* FilterController.swift in Sources */,
+				78131F6127AC248C0003B9F8 /* OwnerProfileController.swift in Sources */,
 				78080AE727A831BF0043461C /* AppDelegate.swift in Sources */,
 				78131F8A27AD22320003B9F8 /* Utilities.swift in Sources */,
 				78131F6427AC25F60003B9F8 /* Extensions.swift in Sources */,
 				78131F8827AD1B820003B9F8 /* AddCertificationController.swift in Sources */,
-				78080AFB27A835A40043461C /* FeedViewController.swift in Sources */,
-				78080B0327A835E50043461C /* ProfileViewController.swift in Sources */,
+				78080AFB27A835A40043461C /* FeedController.swift in Sources */,
+				78080B0327A835E50043461C /* ProfileListController.swift in Sources */,
 				78131F8D27AD6E820003B9F8 /* PetProfileController.swift in Sources */,
-				78080B0627AA61560043461C /* SearchViewController.swift in Sources */,
+				78080B0627AA61560043461C /* SearchController.swift in Sources */,
 				78080AE927A831BF0043461C /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
