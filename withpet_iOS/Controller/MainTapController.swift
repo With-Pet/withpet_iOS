@@ -43,13 +43,13 @@ class MainTapController: UITabBarController {
     
     func configureTapbar() {
         
-        let feedVC = FeedViewController()
+        let feedVC = FeedController()
         let nav1 = templateNavigationController(image: UIImage(systemName: "house"), rootViewController: feedVC)
         
-        let resvVC = ReservationViewController()
+        let resvVC = ReservationController()
         let nav2 = templateNavigationController(image: UIImage(systemName: "list.bullet.rectangle"), rootViewController: resvVC)
         
-        let chatVC = ChatViewController()
+        let chatVC = ChatController()
         let nav3 = templateNavigationController(image: UIImage(systemName: "message"), rootViewController: chatVC)
         
         
@@ -73,7 +73,7 @@ class MainTapController: UITabBarController {
     
     //MARK: - selector
     @objc func didTapPlusButton() {
-        let nav = UINavigationController(rootViewController: PostViewController())
+        let nav = UINavigationController(rootViewController: PostController())
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: true, completion: nil)
     }
