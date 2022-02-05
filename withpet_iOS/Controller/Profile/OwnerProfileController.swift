@@ -268,7 +268,7 @@ class OwnerProfileController: UIViewController {
 }
 
 
-extension OwnerViewController : UICollectionViewDelegate,UICollectionViewDataSource {
+extension OwnerProfileController : UICollectionViewDelegate,UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
@@ -285,7 +285,7 @@ extension OwnerViewController : UICollectionViewDelegate,UICollectionViewDataSou
     }
 }
 
-extension OwnerViewController : AddCertificationControllerDelegate {
+extension OwnerProfileController : AddCertificationControllerDelegate {
     func addCerticiation(CertificationName title: String, CertificationSource source: String, CertificationDate date: Date) {
         print("title : \(title)")
         print("source : \(source)")

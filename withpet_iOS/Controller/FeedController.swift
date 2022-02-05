@@ -63,7 +63,7 @@ class FeedController: UITableViewController {
     }
     
     @objc func handleSearchButton() {
-        let nav = UINavigationController(rootViewController: SearchViewController())
+        let nav = UINavigationController(rootViewController: SearchController())
         nav.modalPresentationStyle = .fullScreen
         present(nav,animated: false)
     }
