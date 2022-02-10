@@ -14,10 +14,89 @@
             filePath = "withpet_iOS/Controller/Profile/PetProfileController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "252"
-            endingLineNumber = "252"
+            startingLineNumber = "315"
+            endingLineNumber = "315"
             landmarkName = "PetProfileController"
             landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7427D798-B31A-4C3B-B0E1-654AA2D28E3F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "withpet_iOS/View/CertificationView.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "nameLabel"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  uuid = "7427D798-B31A-4C3B-B0E1-654AA2D28E3F - 3ce9334a1065ffb9"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UILabel) -&gt; () in variable initialization expression of withpet_iOS.CertificationView.sourceLabel : __C.UILabel"
+                  moduleName = "withpet_iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doyun/Desktop/withpet_ios/withpet_iOS/withpet_iOS/View/CertificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "35"
+                  endingLineNumber = "35"
+                  offsetFromSymbolStart = "24">
+               </Location>
+               <Location
+                  uuid = "7427D798-B31A-4C3B-B0E1-654AA2D28E3F - df85f8e6d0d97589"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "withpet_iOS.CertificationView.init(frame: __C.CGRect) -&gt; withpet_iOS.CertificationView"
+                  moduleName = "withpet_iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doyun/Desktop/withpet_ios/withpet_iOS/withpet_iOS/View/CertificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "580">
+               </Location>
+               <Location
+                  uuid = "7427D798-B31A-4C3B-B0E1-654AA2D28E3F - 93b6e81ff90489e1"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "withpet_iOS.CertificationView.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;withpet_iOS.CertificationView&gt;"
+                  moduleName = "withpet_iOS"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/doyun/Desktop/withpet_ios/withpet_iOS/withpet_iOS/View/CertificationView.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "34"
+                  endingLineNumber = "34"
+                  offsetFromSymbolStart = "440">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "15A0EE76-4057-40B7-824D-06691320F838"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "withpet_iOS/Controller/Profile/OwnerProfileController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "configureCollectionView()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

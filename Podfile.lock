@@ -1,4 +1,5 @@
 PODS:
+  - Cosmos (23.0.0)
   - MaterialComponents/AnimationTiming (124.2.0)
   - MaterialComponents/Availability (124.2.0)
   - MaterialComponents/Buttons (124.2.0):
@@ -74,12 +75,14 @@ PODS:
   - Then (2.7.0)
 
 DEPENDENCIES:
+  - Cosmos (~> 23.0)
   - MaterialComponents/Chips
   - SnapKit (~> 5.0.0)
   - Then
 
 SPEC REPOS:
   trunk:
+    - Cosmos
     - MaterialComponents
     - MDFInternationalization
     - MDFTextAccessibility
@@ -87,12 +90,13 @@ SPEC REPOS:
     - Then
 
 SPEC CHECKSUMS:
+  Cosmos: b5c6a9a637e28a061b54c8f8b1d8529d7d4db73f
   MaterialComponents: 1a9b2d9d45b1601ae544de85089adc4c464306d4
   MDFInternationalization: d697c55307816222a55685c4ccb1044ffb030c12
   MDFTextAccessibility: f4bb4cc2194286651b59a215fdeaa0e05dc90ba5
   SnapKit: 97b92857e3df3a0c71833cce143274bf6ef8e5eb
   Then: acfe0be7e98221c6204e12f8161459606d5d822d
 
-PODFILE CHECKSUM: 406f7c574b59c7d124ecb58ce8663066a7915af9
+PODFILE CHECKSUM: 31f6fd42786b24a0d368b4b3f943b19f04fc5e8f
 
 COCOAPODS: 1.10.2
