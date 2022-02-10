@@ -175,7 +175,6 @@ class AddCertificationController: UIViewController {
     }
     
     @objc func didTapCompleted() {
-        
         delegate?.addCerticiation(CertificationName: "자격증 이름", CertificationSource: "정부 기관", CertificationDate: Date())
         dismiss(animated: true, completion: nil)
     }

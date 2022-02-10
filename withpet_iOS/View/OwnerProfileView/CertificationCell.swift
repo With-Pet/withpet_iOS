@@ -8,15 +8,22 @@
 import Foundation
 import UIKit
 
-class CertificationView:UIView {
-    
+class CertificationCell:UICollectionViewCell {
     //MARK: - Properties
+    
+    private let certiciationLabel = UILabel().then {
+        $0.textColor = .black
+        $0.font = .boldSystemFont(ofSize: 24)
+        $0.text = "자격 및 인증"
+    }
+    
     private let certificationImageView = UIImageView().then {
         $0.contentMode = .scaleAspectFit
         $0.clipsToBounds = true
         $0.backgroundColor = .lightGray
         $0.layer.borderWidth = 4
         $0.layer.borderColor = UIColor.white.cgColor
+        
         
         $0.snp.makeConstraints { make in
             make.height.equalTo(90)
@@ -60,8 +67,7 @@ class CertificationView:UIView {
         addSubview(stack)
         stack.snp.makeConstraints { make in
             make.top.equalTo(certificationImageView.snp.top)
-            make.left.equalTo(certificationImageView.snp.right).offset(35)
-            
+            make.left.equalTo(certificationImageView.snp.right).offset(20)
         }
     }
     
