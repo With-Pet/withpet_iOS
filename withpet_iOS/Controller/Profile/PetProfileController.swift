@@ -15,170 +15,223 @@ class PetProfileController: UIViewController {
         $0.contentMode = .scaleAspectFit
         $0.clipsToBounds = true
         $0.backgroundColor = .white
-        $0.layer.borderWidth = 4
+        $0.layer.borderWidth = 2
         $0.layer.borderColor = UIColor.black.cgColor
         $0.largeContentTitle = "펫 사진입니다!"
-        $0.layer.cornerRadius = 30 / 2
-        $0.image = UIImage(named: "pet")
+        $0.image = UIImage(named: "petImage")
+    }
+    
+    private let nameInputLabel = UILabel().then {
+        $0.text = "콩이"
+        $0.font = UIFont.boldSystemFont(ofSize: 24)
+        $0.textColor = .black
     }
     
     private lazy var containerView = UIView().then {
         $0.backgroundColor = .white
-        $0.addSubview(section1TitleLabel)
         
-        section1TitleLabel.snp.makeConstraints { make in
-            make.top.left.equalToSuperview().offset(18)
+        $0.addSubview(kindsLabel)
+        kindsLabel.snp.makeConstraints { make in
+            make.left.top.equalToSuperview().offset(20)
         }
         
-        let titleStack = UIStackView(arrangedSubviews: [nameLabel,kindsLabel,sexLabel,detailLabel,weightLabel,neuteringLabel])
+        $0.addSubview(detailLabel)
+        detailLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(kindsLabel.snp.centerY)
+            make.left.equalTo(kindsLabel.snp.right).offset(110)
+        }
         
-        titleStack.axis = .vertical
-        titleStack.spacing = 18
-        titleStack.distribution = .fillEqually
-        
-        $0.addSubview(titleStack)
-        titleStack.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(20)
-            make.top.equalTo(section1TitleLabel.snp.bottom).offset(30)
-//            make.height.equalTo(300)
+        $0.addSubview(sexLabel)
+        sexLabel.snp.makeConstraints { make in
+            make.centerY.equalTo(detailLabel.snp.centerY)
+            make.left.equalTo(detailLabel.snp.right).offset(110)
         }
 
-        let underLine = UIView()
-        underLine.backgroundColor = .lightGray
-        
-        $0.addSubview(nameInputLabel)
-        nameInputLabel.snp.makeConstraints { make in
-            make.left.equalTo(titleStack.snp.right).offset(30)
-            make.bottom.equalTo(nameLabel.snp.bottom)
-        }
-        
         $0.addSubview(kindsInputLabel)
         kindsInputLabel.snp.makeConstraints { make in
-            make.left.equalTo(titleStack.snp.right).offset(30)
-            make.bottom.equalTo(kindsLabel.snp.bottom)
+            make.left.equalTo(kindsLabel.snp.left)
+            make.top.equalTo(kindsLabel.snp.bottom).offset(20)
+        }
+
+        $0.addSubview(detailInputLabel)
+        detailInputLabel.snp.makeConstraints { make in
+            make.left.equalTo(detailLabel)
+            make.top.equalTo(kindsInputLabel.snp.top)
         }
         
         $0.addSubview(sexInputLabel)
         sexInputLabel.snp.makeConstraints { make in
-            make.left.equalTo(titleStack.snp.right).offset(30)
-            make.bottom.equalTo(sexLabel.snp.bottom)
+            make.left.equalTo(sexLabel.snp.left)
+            make.top.equalTo(kindsInputLabel.snp.top)
+        }
+
+        $0.addSubview(ageLabel)
+        ageLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(20)
+            make.top.equalTo(kindsInputLabel.snp.bottom).offset(30)
         }
         
-        $0.addSubview(detailInputLabel)
-        detailInputLabel.snp.makeConstraints { make in
-            make.left.equalTo(titleStack.snp.right).offset(30)
-            make.bottom.equalTo(detailLabel.snp.bottom)
+        $0.addSubview(weightLabel)
+        weightLabel.snp.makeConstraints { make in
+            make.left.equalTo(detailLabel.snp.left)
+            make.top.equalTo(ageLabel.snp.top)
+        }
+        
+        $0.addSubview(neuteringLabel)
+        neuteringLabel.snp.makeConstraints { make in
+            make.left.equalTo(sexLabel)
+            make.top.equalTo(ageLabel.snp.top)
+        }
+        
+        $0.addSubview(ageInputLabel)
+        ageInputLabel.snp.makeConstraints { make in
+            make.left.equalTo(kindsInputLabel.snp.left)
+            make.top.equalTo(ageLabel.snp.bottom).offset(30)
         }
         
         $0.addSubview(weightInputLabel)
         weightInputLabel.snp.makeConstraints { make in
-            make.left.equalTo(titleStack.snp.right).offset(30)
-            make.bottom.equalTo(weightLabel.snp.bottom)
+            make.left.equalTo(detailInputLabel.snp.left)
+            make.top.equalTo(ageInputLabel.snp.top)
         }
         
         $0.addSubview(neuteringInputLabel)
         neuteringInputLabel.snp.makeConstraints { make in
-            make.left.equalTo(titleStack.snp.right).offset(30)
-            make.bottom.equalTo(neuteringLabel.snp.bottom)
+            make.top.equalTo(weightInputLabel.snp.top)
+            make.left.equalTo(sexInputLabel.snp.left)
         }
+        let underLine = UIView()
+        underLine.backgroundColor = .lightGray
         
-        
-    }
-    
-    private let section1TitleLabel = UILabel().then {
-        $0.text = "기본 정보"
-        $0.font = UIFont.boldSystemFont(ofSize: 24)
-        $0.textColor = .black
-    }
-    private let nameLabel = UILabel().then {
-        $0.text = "이름"
-        $0.font = UIFont.systemFont(ofSize: 20)
-        $0.textColor = .black
+        $0.addSubview(underLine)
+        underLine.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+            make.height.equalTo(1)
+            make.bottom.equalToSuperview()
+        }
+
     }
     
     private let kindsLabel = UILabel().then {
         $0.text = "종류"
-        $0.font = UIFont.systemFont(ofSize: 20)
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
         $0.textColor = .black
     }
     
     private let detailLabel = UILabel().then {
         $0.text = "품종"
-        $0.font = UIFont.systemFont(ofSize: 20)
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
         $0.textColor = .black
     }
     
     private let sexLabel = UILabel().then {
         $0.text = "성별"
-        $0.font = UIFont.systemFont(ofSize: 20)
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
+        $0.textColor = .black
+    }
+    
+    private let ageLabel = UILabel().then {
+        $0.text = "나이"
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
         $0.textColor = .black
     }
     
     private let weightLabel = UILabel().then {
         $0.text = "몸무게"
-        $0.font = UIFont.systemFont(ofSize: 20)
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
         $0.textColor = .black
     }
     
     private let neuteringLabel = UILabel().then {
         $0.text = "중성화"
-        $0.font = UIFont.systemFont(ofSize: 20)
+        $0.font = UIFont.boldSystemFont(ofSize: 20)
         $0.textColor = .black
     }
     
-    private let nameInputLabel = UILabel().then {
-        $0.text = "콩이"
-        $0.font = UIFont.systemFont(ofSize: 16)
-        $0.textColor = .darkText
-    }
     
     private let kindsInputLabel = UILabel().then {
         $0.text = "강아지"
-        $0.font = UIFont.systemFont(ofSize: 16)
-        $0.textColor = .darkText
+        $0.font = UIFont.systemFont(ofSize: 18)
+        $0.textColor = .lightGray
     }
     
     private let detailInputLabel = UILabel().then {
         $0.text = "말티즈"
-        $0.font = UIFont.systemFont(ofSize: 16)
-        $0.textColor = .darkText
+        $0.font = UIFont.systemFont(ofSize: 18)
+        $0.textColor = .lightGray
     }
     
     private let sexInputLabel = UILabel().then {
         $0.text = "여성"
-        $0.font = UIFont.systemFont(ofSize: 16)
-        $0.textColor = .darkText
+        $0.font = UIFont.systemFont(ofSize: 18)
+        $0.textColor = .lightGray
     }
     private let weightInputLabel = UILabel().then {
         $0.text = "2.8kg"
-        $0.font = UIFont.systemFont(ofSize: 16)
-        $0.textColor = .darkText
+        $0.font = UIFont.systemFont(ofSize: 18)
+        $0.textColor = .lightGray
+    }
+    private let ageInputLabel =  UILabel().then {
+        $0.text = "3살"
+        $0.font = UIFont.systemFont(ofSize: 18)
+        $0.textColor = .lightGray
     }
     private let neuteringInputLabel = UILabel().then {
         $0.text = "O"
-        $0.font = UIFont.systemFont(ofSize: 16)
-        $0.textColor = .darkText
+        $0.font = UIFont.systemFont(ofSize: 18)
+        $0.textColor = .lightGray
     }
     
     private let section2TitleLabel = UILabel().then {
-        $0.text = "특이사항 및 참고사항"
+        $0.text = "특이사항"
         $0.font = UIFont.boldSystemFont(ofSize: 24)
         $0.textColor = .black
     }
     
-    private let textField = UITextView().then {
-        $0.backgroundColor = .white
-        $0.layer.masksToBounds = true
-        $0.layer.cornerRadius = 15
-        $0.layer.borderWidth = 1.5
-        $0.layer.borderColor = UIColor.mainColor.cgColor
-        $0.font = UIFont.systemFont(ofSize: 16) // Set font color.
-        $0.textColor = .darkText // Set left justified.
+    private let introLabel = UILabel().then {
+        $0.font = UIFont.systemFont(ofSize: 18) // Set font color.
+        $0.textColor = .lightGray // Set left justified.
         $0.textAlignment = .left
-        $0.isEditable = false
         $0.text = "간단한 소개나 주의사항을 적어주세요 :)"
     }
     
+    private var titleLabel = UILabel().then {
+        $0.textColor = .black
+        $0.font = .boldSystemFont(ofSize: 24)
+        $0.text = "체험 후기"
+    }
+    private let moreButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
+        $0.tintColor = .black
+        $0.addTarget(self, action: #selector(didTapMoreButton), for: .touchUpInside)
+    }
+    
+    private lazy var ratingContainer = UIView().then {
+        $0.backgroundColor = .white
+        
+        $0.addSubview(titleLabel)
+        titleLabel.snp.makeConstraints { make in
+            make.top.left.equalToSuperview().offset(20)
+        }
+        
+        $0.addSubview(moreButton)
+        moreButton.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-16)
+            make.top.equalToSuperview().offset(20)
+            make.height.width.equalTo(20)
+        }
+        
+        let ratingView = RatingView(frame: .zero)
+        
+        $0.addSubview(ratingView)
+        ratingView.snp.makeConstraints { make in
+            make.left.right.equalToSuperview()
+            make.top.equalTo(titleLabel.snp.bottom)
+            make.bottom.equalToSuperview()
+        }
+        
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()
@@ -198,48 +251,58 @@ class PetProfileController: UIViewController {
         }
         petImageView.layer.cornerRadius = 120/2
         
+        view.addSubview(nameInputLabel)
+        nameInputLabel.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.top.equalTo(petImageView.snp.bottom).offset(20)
+        }
         let section1 = UIView()
         section1.backgroundColor = .lightGray
         
         view.addSubview(section1)
         section1.snp.makeConstraints { make in
-            make.top.equalTo(petImageView.snp.bottom).offset(40)
-            make.left.right.equalToSuperview()
-            make.height.equalTo(8)
+            make.top.equalTo(nameInputLabel.snp.bottom).offset(20)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+            make.height.equalTo(1)
         }
         
         view.addSubview(containerView)
         containerView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(section1.snp.bottom)
-            make.height.equalTo(330)
+            make.height.equalTo(210)
         }
-        
-        let section2 = UIView()
-        section2.backgroundColor = .lightGray
-        
-        view.addSubview(section2)
-        section2.snp.makeConstraints { make in
-            make.top.equalTo(containerView.snp.bottom)
-            make.left.right.equalToSuperview()
-            make.height.equalTo(8)
-        }
-        
+
         view.addSubview(section2TitleLabel)
         section2TitleLabel.snp.makeConstraints { make in
-            make.top.equalTo(section2.snp.bottom).offset(20)
-            make.left.equalToSuperview().offset(30)
+            make.top.equalTo(containerView.snp.bottom).offset(20)
+            make.left.equalToSuperview().offset(20)
         }
         
-        view.addSubview(textField)
-        textField.snp.makeConstraints { make in
-            make.top.equalTo(section2TitleLabel.snp.bottom).offset(30)
-            make.width.equalTo(320)
-            make.centerX.equalToSuperview()
-            make.height.equalTo(140)
+        view.addSubview(introLabel)
+        introLabel.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(20)
+            make.top.equalTo(section2TitleLabel.snp.bottom).offset(20)
         }
         
+        let underline = UIView()
+        underline.backgroundColor = .lightGray
         
+        view.addSubview(underline)
+        underline.snp.makeConstraints { make in
+            make.top.equalTo(introLabel.snp.bottom).offset(10)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+            make.height.equalTo(1)
+        }
+        
+        view.addSubview(ratingContainer)
+        ratingContainer.snp.makeConstraints { make in
+            make.top.equalTo(underline.snp.bottom)
+            make.left.right.equalToSuperview()
+            make.height.equalTo(220)
+        }
     }
     func configureNavigationbar() {
         navigationController?.navigationBar.isHidden = false
@@ -252,8 +315,11 @@ class PetProfileController: UIViewController {
     
     //MARK: - selector
     @objc func handleDismissal() {
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: false, completion: nil)
     }
 
+    @objc func didTapMoreButton(){
+        
+    }
 
 }
