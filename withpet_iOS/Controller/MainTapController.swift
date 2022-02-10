@@ -44,27 +44,25 @@ class MainTapController: UITabBarController {
     func configureTapbar() {
         
         let feedVC = FeedController()
-        let nav1 = templateNavigationController(image: UIImage(systemName: "house"), rootViewController: feedVC)
+        let nav1 = templateNavigationController(image: UIImage(named: "outline_pets_black_36pt"), rootViewController: feedVC)
         
         let resvVC = ReservationController()
-        let nav2 = templateNavigationController(image: UIImage(systemName: "list.bullet.rectangle"), rootViewController: resvVC)
+        let nav2 = templateNavigationController(image: UIImage(named: "outline_event_note_black_36pt"), rootViewController: resvVC)
+        
+        let postVC = PostController()
+        let nav3 = UINavigationController(rootViewController: postVC)
         
         let chatVC = ChatController()
-        let nav3 = templateNavigationController(image: UIImage(systemName: "message"), rootViewController: chatVC)
-        
+        let nav4 = templateNavigationController(image: UIImage(named: "outline_chat_black_36pt"), rootViewController: chatVC)
         
         let profile = ProfileListController()
-        let nav4 = templateNavigationController(image: UIImage(systemName: "person"), rootViewController: profile)
+        let nav5 = templateNavigationController(image: UIImage(named: "outline_person_outline_black_36pt"), rootViewController: profile)
         
-        setViewControllers([nav1,nav2,nav3,nav4], animated: false)
-        
-        tabBar.layer.borderWidth = 1
-        tabBar.layer.borderColor = UIColor.mainColor.cgColor
-        tabBar.tintColor = .mainColor
+        setViewControllers([nav1,nav2,nav3,nav4,nav5], animated: false)
+        tabBar.tintColor = .barColor
     }
     
     func templateNavigationController(image: UIImage?,rootViewController: UIViewController) -> UINavigationController{
-        
         let navigation = UINavigationController(rootViewController: rootViewController)
         navigation.tabBarItem.image = image
         return navigation
@@ -75,7 +73,7 @@ class MainTapController: UITabBarController {
     @objc func didTapPlusButton() {
         let nav = UINavigationController(rootViewController: PostController())
         nav.modalPresentationStyle = .fullScreen
-        present(nav, animated: true, completion: nil)
+        present(nav, animated: false, completion: nil)
     }
 }
 
