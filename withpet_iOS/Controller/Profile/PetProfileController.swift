@@ -9,6 +9,7 @@ import UIKit
 
 class PetProfileController: UIViewController {
     
+    //MARK: - Properties
     let nameList = ["이름","종류","품종","성별","몸무게","중성화"]
     
     private let petImageView = UIImageView().then{
@@ -232,6 +233,8 @@ class PetProfileController: UIViewController {
         }
         
     }
+    
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configureUI()

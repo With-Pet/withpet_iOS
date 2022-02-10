@@ -18,16 +18,24 @@
 		78080B0127A835DC0043461C /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0027A835DC0043461C /* ChatController.swift */; };
 		78080B0327A835E50043461C /* ProfileListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0227A835E50043461C /* ProfileListController.swift */; };
 		78080B0627AA61560043461C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0527AA61560043461C /* SearchController.swift */; };
-		78080B0827AA6A340043461C /* PetFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0727AA6A340043461C /* PetFeedCell.swift */; };
+		78080B0827AA6A340043461C /* MypetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0727AA6A340043461C /* MypetsCell.swift */; };
 		78080B0B27AA7F690043461C /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0A27AA7F690043461C /* FilterController.swift */; };
 		78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */; };
 		78131F6127AC248C0003B9F8 /* OwnerProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6027AC248C0003B9F8 /* OwnerProfileController.swift */; };
 		78131F6427AC25F60003B9F8 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6327AC25F60003B9F8 /* Extensions.swift */; };
-		78131F6627AC39A40003B9F8 /* CertificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6527AC39A40003B9F8 /* CertificationView.swift */; };
+		78131F6627AC39A40003B9F8 /* CertificationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6527AC39A40003B9F8 /* CertificationCell.swift */; };
 		78131F8827AD1B820003B9F8 /* AddCertificationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F8727AD1B820003B9F8 /* AddCertificationController.swift */; };
 		78131F8A27AD22320003B9F8 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F8927AD22320003B9F8 /* Utilities.swift */; };
 		78131F8D27AD6E820003B9F8 /* PetProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F8C27AD6E820003B9F8 /* PetProfileController.swift */; };
 		78131F9127AE49540003B9F8 /* EditOwnerProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F9027AE49540003B9F8 /* EditOwnerProfileController.swift */; };
+		78131F9527AEADF80003B9F8 /* ReviewsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F9427AEADF80003B9F8 /* ReviewsController.swift */; };
+		78131F9727AEAE150003B9F8 /* ReviewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F9627AEAE150003B9F8 /* ReviewCell.swift */; };
+		78131F9927AF9D320003B9F8 /* EditPetProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F9827AF9D310003B9F8 /* EditPetProfileController.swift */; };
+		78131F9D27AFB83F0003B9F8 /* LoginController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F9C27AFB83F0003B9F8 /* LoginController.swift */; };
+		78131F9F27B0E8980003B9F8 /* OwnerProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F9E27B0E8980003B9F8 /* OwnerProfileHeader.swift */; };
+		78131FD427B2911C0003B9F8 /* OnwerProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */; };
+		78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD527B3A46B0003B9F8 /* RatingView.swift */; };
+		78131FD827B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */; };
 		A881FCD7F1CD861940790D92 /* Pods_withpet_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -46,16 +54,24 @@
 		78080B0027A835DC0043461C /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		78080B0227A835E50043461C /* ProfileListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListController.swift; sourceTree = "<group>"; };
 		78080B0527AA61560043461C /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
-		78080B0727AA6A340043461C /* PetFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetFeedCell.swift; sourceTree = "<group>"; };
+		78080B0727AA6A340043461C /* MypetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypetsCell.swift; sourceTree = "<group>"; };
 		78080B0A27AA7F690043461C /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
 		78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListCell.swift; sourceTree = "<group>"; };
 		78131F6027AC248C0003B9F8 /* OwnerProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileController.swift; sourceTree = "<group>"; };
 		78131F6327AC25F60003B9F8 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		78131F6527AC39A40003B9F8 /* CertificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationView.swift; sourceTree = "<group>"; };
+		78131F6527AC39A40003B9F8 /* CertificationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CertificationCell.swift; sourceTree = "<group>"; };
 		78131F8727AD1B820003B9F8 /* AddCertificationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCertificationController.swift; sourceTree = "<group>"; };
 		78131F8927AD22320003B9F8 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		78131F8C27AD6E820003B9F8 /* PetProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetProfileController.swift; sourceTree = "<group>"; };
 		78131F9027AE49540003B9F8 /* EditOwnerProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerProfileController.swift; sourceTree = "<group>"; };
+		78131F9427AEADF80003B9F8 /* ReviewsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsController.swift; sourceTree = "<group>"; };
+		78131F9627AEAE150003B9F8 /* ReviewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewCell.swift; sourceTree = "<group>"; };
+		78131F9827AF9D310003B9F8 /* EditPetProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditPetProfileController.swift; sourceTree = "<group>"; };
+		78131F9C27AFB83F0003B9F8 /* LoginController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginController.swift; sourceTree = "<group>"; };
+		78131F9E27B0E8980003B9F8 /* OwnerProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileHeader.swift; sourceTree = "<group>"; };
+		78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnwerProfileFooter.swift; sourceTree = "<group>"; };
+		78131FD527B3A46B0003B9F8 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerProfileHeader.swift; sourceTree = "<group>"; };
 		B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_withpet_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B999708DD4F9F15E78E5B7B3 /* Pods-withpet_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.release.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -105,6 +121,7 @@
 				78080AE627A831BF0043461C /* AppDelegate.swift */,
 				78080AE827A831BF0043461C /* SceneDelegate.swift */,
 				78080B0927AA6A390043461C /* View */,
+				78080B0727AA6A340043461C /* MypetsCell.swift */,
 				78080B0427A835ED0043461C /* Controller */,
 				78131F6227AC25DA0003B9F8 /* Utilities */,
 				78080AEF27A831C20043461C /* Assets.xcassets */,
@@ -133,9 +150,10 @@
 		78080B0927AA6A390043461C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				78080B0727AA6A340043461C /* PetFeedCell.swift */,
 				78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */,
-				78131F6527AC39A40003B9F8 /* CertificationView.swift */,
+				78131F9627AEAE150003B9F8 /* ReviewCell.swift */,
+				78131FD527B3A46B0003B9F8 /* RatingView.swift */,
+				78131FCA27B194760003B9F8 /* OwnerProfileView */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +166,8 @@
 				78131F9027AE49540003B9F8 /* EditOwnerProfileController.swift */,
 				78131F8727AD1B820003B9F8 /* AddCertificationController.swift */,
 				78131F8C27AD6E820003B9F8 /* PetProfileController.swift */,
+				78131F9827AF9D310003B9F8 /* EditPetProfileController.swift */,
+				78131F9427AEADF80003B9F8 /* ReviewsController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -164,8 +184,20 @@
 		78131F8B27AD44B40003B9F8 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
+				78131F9C27AFB83F0003B9F8 /* LoginController.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		78131FCA27B194760003B9F8 /* OwnerProfileView */ = {
+			isa = PBXGroup;
+			children = (
+				78131F9E27B0E8980003B9F8 /* OwnerProfileHeader.swift */,
+				78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */,
+				78131F6527AC39A40003B9F8 /* CertificationCell.swift */,
+				78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */,
+			);
+			path = OwnerProfileView;
 			sourceTree = "<group>";
 		};
 		F5CDC302377CE6D4959A56FA /* Frameworks */ = {
@@ -291,24 +323,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				78080AFF27A835CF0043461C /* PostController.swift in Sources */,
+				78131F9927AF9D320003B9F8 /* EditPetProfileController.swift in Sources */,
 				78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */,
-				78131F6627AC39A40003B9F8 /* CertificationView.swift in Sources */,
-				78080B0827AA6A340043461C /* PetFeedCell.swift in Sources */,
+				78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */,
+				78131F6627AC39A40003B9F8 /* CertificationCell.swift in Sources */,
+				78131FD427B2911C0003B9F8 /* OnwerProfileFooter.swift in Sources */,
+				78080B0827AA6A340043461C /* MypetsCell.swift in Sources */,
 				78080AFD27A835BE0043461C /* ReservationController.swift in Sources */,
 				78080AEB27A831BF0043461C /* MainTapController.swift in Sources */,
 				78080B0127A835DC0043461C /* ChatController.swift in Sources */,
+				78131F9F27B0E8980003B9F8 /* OwnerProfileHeader.swift in Sources */,
 				78080B0B27AA7F690043461C /* FilterController.swift in Sources */,
+				78131F9D27AFB83F0003B9F8 /* LoginController.swift in Sources */,
 				78131F6127AC248C0003B9F8 /* OwnerProfileController.swift in Sources */,
 				78080AE727A831BF0043461C /* AppDelegate.swift in Sources */,
 				78131F8A27AD22320003B9F8 /* Utilities.swift in Sources */,
+				78131F9727AEAE150003B9F8 /* ReviewCell.swift in Sources */,
 				78131F6427AC25F60003B9F8 /* Extensions.swift in Sources */,
 				78131F9127AE49540003B9F8 /* EditOwnerProfileController.swift in Sources */,
 				78131F8827AD1B820003B9F8 /* AddCertificationController.swift in Sources */,
 				78080AFB27A835A40043461C /* FeedController.swift in Sources */,
+				78131FD827B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift in Sources */,
 				78080B0327A835E50043461C /* ProfileListController.swift in Sources */,
 				78131F8D27AD6E820003B9F8 /* PetProfileController.swift in Sources */,
 				78080B0627AA61560043461C /* SearchController.swift in Sources */,
 				78080AE927A831BF0043461C /* SceneDelegate.swift in Sources */,
+				78131F9527AEADF80003B9F8 /* ReviewsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
