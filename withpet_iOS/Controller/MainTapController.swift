@@ -28,11 +28,9 @@ class MainTapController: UITabBarController {
     }
 
     //MARK: - Configure
-
     func setCircleButton() {
         
         view.addSubview(actionButton)
-        
         actionButton.snp.makeConstraints { make in
             make.centerX.equalToSuperview()
             make.bottom.equalToSuperview().offset(-55)
