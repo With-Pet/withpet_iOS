@@ -9,11 +9,11 @@ import UIKit
 
 class Utilities {
     
-    func makeLabel(text:String) -> UILabel {
+    func makeLabel(with text:String,font size:Int) -> UILabel {
         let label = UILabel()
         label.text = text
         label.textColor = .black
-        label.font = UIFont.systemFont(ofSize: 20)
+        label.font = UIFont.systemFont(ofSize: CGFloat(size))
         label.textAlignment = .left
         return label
     }
@@ -47,17 +47,15 @@ class Utilities {
     }
 //    func underlineTextField(withPlaceholder placeholder:String,font size:Int) -> UITextField {
 //        let tf = UITextField()
-//        tf.backgroundColor = .red
+//        tf.backgroundColor = .white
 //        tf.text = placeholder
 //        tf.textColor = .black
-//        tf.textAlignment = .center
+//        tf.textAlignment = .left
 //        tf.font = .systemFont(ofSize: CGFloat(size))
-//        tf.clearButtonMode = .always
-//        let border = CALayer()
-//        border.frame = CGRect(x: 0, y: tf.frame.size.height-1, width: tf.frame.width, height: 1)
-//        border.backgroundColor = UIColor.black.cgColor
-//        tf.layer.addSublayer(border)
-//
+//        tf.clearButtonMode = .whileEditing
+//        tf.tintColor = .black
+//        
+////        tf.layer.addSublayer(border)
 //        return tf
 //    }
     
@@ -70,5 +68,24 @@ class Utilities {
         label.sizeToFit()
         
         return label.frame.height
+    }
+    
+    func iconLabel(with icon: UIImage?,text :String) -> NSMutableAttributedString {
+        // Create Attachment
+        let imageAttachment = NSTextAttachment()
+        imageAttachment.image = icon
+        imageAttachment.bounds = CGRect(x: 0, y: 0, width: 15, height: 15)
+        // Create string with attachment
+        let attachmentString = NSAttributedString(attachment: imageAttachment)
+        // Initialize mutable string
+        
+        let completeText = NSMutableAttributedString(string: "")
+        // Add image to mutable string
+        completeText.append(attachmentString)
+        // Add your text to mutable string
+        let textAfterIcon = NSAttributedString(string: text)
+        completeText.append(textAfterIcon)
+        
+        return completeText
     }
 }
