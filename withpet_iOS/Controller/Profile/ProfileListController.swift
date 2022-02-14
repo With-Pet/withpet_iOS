@@ -12,14 +12,24 @@ private let reuseIdentifier = "ProfileListCell"
 
 class ProfileListController : UITableViewController {
     
-    private let list = ["내 프로필","내 반려동물 프로필","찜한 돌봄이","찜한 반려 동물","공지사항","FAQ","환경설정","로그아웃","회원 탈퇴"]
+    private let list = ["내 프로필 관리하기","반려동물 프로필 관리하기","찜한 게시물","찜한 돌봄이","공지사항","FAQ","환경설정","로그아웃","회원 탈퇴"]
 
+    private let icon = [UIImage(named: "person"),UIImage(named:"pets"),
+                        UIImage(named: "star"),UIImage(named: "favorite")
+                        ,UIImage(named: "campaign"),UIImage(named: "help")
+                        ,UIImage(named: "settings"),UIImage(named: "logout")
+                        ,UIImage(named: "person_remove")]
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         navigationItem.title = "Profile"
         view.backgroundColor = .white
         tableView.register(ProfileListCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.separatorStyle = .singleLine
+        tableView.isScrollEnabled = false
+        tableView.separatorInset.left = 0
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -29,6 +39,8 @@ class ProfileListController : UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? ProfileListCell else { return UITableViewCell() }
         cell.label.text = list[indexPath.row]
+        cell.icon.image = icon[indexPath.row]
+        cell.selectionStyle = .none
         return cell
     }
     
@@ -36,14 +48,40 @@ class ProfileListController : UITableViewController {
         
         switch indexPath.row {
         case 0 :
-            let ownerVC = UINavigationController(rootViewController: OwnerProfileController())
-            ownerVC.modalPresentationStyle = .fullScreen
-            present(ownerVC, animated: true, completion: nil)
+            let editProfileVC = UINavigationController(rootViewController: EditOwnerProfileController(collectionViewLayout: UICollectionViewFlowLayout()))
+            editProfileVC.modalPresentationStyle = .fullScreen
+            present(editProfileVC, animated: false, completion: nil)
         case 1:
-            let petProfileVC = UINavigationController(rootViewController: PetProfileController())
-            petProfileVC.modalPresentationStyle = .fullScreen
-            present(petProfileVC, animated: true, completion: nil)
-        default :
+            let layout = UICollectionViewFlowLayout()
+            layout.minimumLineSpacing = 20
+            let MyPetVC = UINavigationController(rootViewController: MyPetsController(collectionViewLayout: layout))
+            MyPetVC.modalPresentationStyle = .fullScreen
+            present(MyPetVC, animated: false, completion: nil)
+        case 2:
+            let followedCareVC = UINavigationController(rootViewController: FollowedCaresController())
+            followedCareVC.modalPresentationStyle = .fullScreen
+            present(followedCareVC,animated: false)
+        case 3:
+            let followedPostVC = UINavigationController(rootViewController: FollowedPostsController())
+            followedPostVC.modalPresentationStyle = .fullScreen
+            present(followedPostVC,animated: false)
+        case 4:
+            let addReviewsVC = UINavigationController(rootViewController: AddReviewController())
+            addReviewsVC.modalPresentationStyle = .fullScreen
+            present(addReviewsVC,animated: false)
+        case 5 :
+            let loginVC = LoginController()
+            loginVC.modalPresentationStyle = .fullScreen
+            present(loginVC,animated: false)
+        case 6:
+            let registerVC = UINavigationController(rootViewController: RegisterController())
+            registerVC.modalPresentationStyle = .fullScreen
+            present(registerVC,animated: false)
+        case 7 :
+            let vc = UINavigationController(rootViewController: OwnerProfileController())
+            vc.modalPresentationStyle = .fullScreen
+            present(vc,animated: false)
+        default:
             print("HEllo")
         }
 
