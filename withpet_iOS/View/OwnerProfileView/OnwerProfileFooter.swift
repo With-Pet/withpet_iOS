@@ -8,7 +8,12 @@
 import UIKit
 import Cosmos
 
+protocol OwnerProfileFooterDeleagte : class {
+    func showMoreReviews()
+}
 class OnwerProfileFooter: UICollectionReusableView {
+    
+    weak var delegate : OwnerProfileFooterDeleagte?
     
     private var titleLabel = UILabel().then {
         $0.textColor = .black
@@ -18,7 +23,7 @@ class OnwerProfileFooter: UICollectionReusableView {
     private let moreButton = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         $0.tintColor = .black
-        $0.addTarget(self, action: #selector(didTapMoreButton), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(handleMoreRiviews), for: .touchUpInside)
     }
     override init(frame:CGRect) {
         super.init(frame:.zero)
@@ -39,13 +44,13 @@ class OnwerProfileFooter: UICollectionReusableView {
         addSubview(titleLabel)
         titleLabel.snp.makeConstraints { make in
             make.left.equalToSuperview().offset(20)
-            make.top.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(25)
         }
         
         addSubview(moreButton)
         moreButton.snp.makeConstraints { make in
             make.right.equalToSuperview().offset(-16)
-            make.top.equalToSuperview().offset(20)
+            make.top.equalToSuperview().offset(25)
             make.height.width.equalTo(20)
         }
         
@@ -63,8 +68,8 @@ class OnwerProfileFooter: UICollectionReusableView {
     }
     
     //MARK: - selector
-    @objc func didTapMoreButton() {
-        
+    @objc func handleMoreRiviews() {
+        delegate?.showMoreReviews()
     }
     
 }
