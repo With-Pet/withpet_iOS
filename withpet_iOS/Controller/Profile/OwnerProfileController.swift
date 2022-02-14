@@ -12,18 +12,32 @@ import MaterialComponents
 private let headerIdentifier = "OwnerHeader"
 private let certificationIdentifier = "certificationCell"
 private let footerIdentifier = "OnwerFooter"
+
 class OwnerProfileController: UIViewController {
     
     //MARK: - Properties
     private var collectionView : UICollectionView!
     
+    private var isFollowed:Bool = false
+    
+    private var storeButton = UIButton().then {
+        $0.setImage(UIImage(systemName: "heart"), for: .normal)
+        
+        $0.addTarget(self, action: #selector(handleFollow), for: .touchUpInside)
+        $0.frame = CGRect(x: 0, y: 0, width: 25, height: 25)
+        
+    }
     //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureNavigationbar()
         configureCollectionView()
         configureUI()
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNavigationbar()
     }
     
     //MARK: - Confiture
@@ -43,6 +57,7 @@ class OwnerProfileController: UIViewController {
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.barTintColor = .black
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(handleDismissal))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(customView: storeButton)
     }
     
     func configureCollectionView() {
@@ -59,10 +74,23 @@ class OwnerProfileController: UIViewController {
     
     //MARK: - selector
     @objc func handleDismissal(){
-        dismiss(animated: true)
+        navigationController?.popViewController(animated: true)
     }
+    
     @objc func didTapSetting() {
         print("DEBUG : tapped setting button")
+    }
+    @objc func handleFollow() {
+        print("DEBUG : clicked")
+        if isFollowed {
+            storeButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            storeButton.tintColor = .black
+            isFollowed = false
+        } else {
+            storeButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+            storeButton.tintColor = .red
+            isFollowed = true
+        }
     }
     
 }
@@ -72,9 +100,11 @@ extension OwnerProfileController : UICollectionViewDelegate,UICollectionViewData
         switch kind {
         case UICollectionView.elementKindSectionHeader :
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: headerIdentifier, for: indexPath) as! OwnerProfileHeader
+            header.delegate = self
             return header
         case UICollectionView.elementKindSectionFooter :
             let footer = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: footerIdentifier, for: indexPath) as! OnwerProfileFooter
+            footer.delegate = self
             return footer
         default :
             return UICollectionReusableView()
@@ -96,7 +126,7 @@ extension OwnerProfileController : UICollectionViewDelegateFlowLayout {
         
         let height = Utilities().heightForView(text: "현재 6세 말티즈를 키우고 있으며, 자격증을 보유하고 있습니다.", font: .systemFont(ofSize: 20), width: view.frame.width-36)
         
-        return CGSize(width: view.frame.width, height: 550 + height)
+        return CGSize(width: view.frame.width, height: 650 + height)
     }
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForFooterInSection section: Int) -> CGSize {
         return CGSize(width:view.frame.width,height:400)
@@ -104,5 +134,17 @@ extension OwnerProfileController : UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: view.frame.width, height: 110)
+    }
+}
+extension OwnerProfileController : OwnerProfileHeaderDelegate {
+    func didTapViewPosts() {
+//        let vc = EditOwnerProfileController()
+//        navigationController?.pushViewController(vc, animated: false)
+    }
+}
+extension OwnerProfileController : OwnerProfileFooterDeleagte {
+    func showMoreReviews() {
+        let vc = ReviewsController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }
