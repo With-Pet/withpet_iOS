@@ -13,18 +13,25 @@ class FeedController: UITableViewController {
     
     //MARK: - Properties
     private lazy var actionButton = UIButton().then {
-        
-        let imageAttachment = NSTextAttachment()
-        imageAttachment.image = UIImage(named: "marker")
-        imageAttachment.bounds = CGRect(x: 10, y: -7, width: 30, height: 30)
-        
-        let attributedTitle = NSMutableAttributedString(attributedString: NSAttributedString(attachment: imageAttachment))
-        attributedTitle.append(NSAttributedString(string: " postion", attributes: [.font : UIFont.systemFont(ofSize: 30), .foregroundColor : UIColor.systemGray]))
-        
-        $0.setAttributedTitle(attributedTitle, for: .normal)
+        $0.setImage( UIImage(named: "outline_place_black_36pt"), for: .normal)
+        $0.setTitle(" postion", for: .normal)
+        $0.setTitleColor(.darkGray, for: .normal)
+        $0.titleLabel?.font = .boldSystemFont(ofSize: 26)
         $0.titleLabel?.textAlignment = .left
-        $0.frame = CGRect(x: 20, y: 0, width: 64, height: 32)
-        $0.addTarget(self, action: #selector(handleLocationButton), for: .touchUpInside)
+        $0.frame = CGRect(x: 20, y: 0, width: 20, height: 20)
+        $0.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)
+    }
+    
+    private let filterButton = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20)).then {
+        $0.setImage(UIImage(named: "outline_filter_list_black_36pt"), for: .normal)
+        $0.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)
+        $0.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+    }
+    
+    private let searchButton = UIButton(frame: CGRect(x: 0, y: 0, width: 20, height: 20)).then {
+        $0.addTarget(self, action: #selector(handleSearchButton), for: .touchUpInside)
+        $0.setImage(UIImage(named: "outline_search_black_36pt"), for: .normal)
+        $0.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
     }
     
     //MARK: - Lifecycle
@@ -36,18 +43,20 @@ class FeedController: UITableViewController {
     //MARK: - Configure
     func configureUI() {
         view.backgroundColor = .white
-        tableView.register(PetFeedCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.register(MypetsCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
         
     }
     func setNavigationBar(){
         navigationController?.navigationBar.isHidden = false
-        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: actionButton)
-        let filterButton = UIBarButtonItem(image: UIImage(systemName: "line.3.horizontal.decrease"), style: .plain, target: self, action: #selector(handleFilterButton))
-        let glassButton = UIBarButtonItem(image: UIImage(systemName: "magnifyingglass"), style: .plain, target: self, action: #selector(handleSearchButton))
-        navigationItem.rightBarButtonItems = [glassButton,filterButton]
         navigationController?.navigationBar.tintColor = .darkGray
+        
+        navigationItem.leftBarButtonItem = UIBarButtonItem(customView: actionButton)
+        let filterButton = UIBarButtonItem(customView: filterButton)
+        let glassButton = UIBarButtonItem(customView: searchButton)
+        navigationItem.rightBarButtonItems = [glassButton,filterButton]
+        
     }
     
     //MARK: - Selector
@@ -56,16 +65,13 @@ class FeedController: UITableViewController {
     }
     
     @objc func handleFilterButton() {
-//        let vc = FileterViewController()
-//        navigationController?.pushViewController(vc, animated: false)
-        
         print("DEBUG : clicked filter button")
     }
     
     @objc func handleSearchButton() {
-        let nav = UINavigationController(rootViewController: SearchController())
-        nav.modalPresentationStyle = .fullScreen
-        present(nav,animated: false)
+        print("DEBUG : clicked search Button")
+        let vc = SearchController()
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     // MARK: - Table view data source
@@ -75,8 +81,8 @@ class FeedController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? PetFeedCell else { return UITableViewCell()}
-        
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? MypetsCell else { return UITableViewCell()}
+        cell.selectionStyle = .none
         return cell
     }
     override func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
