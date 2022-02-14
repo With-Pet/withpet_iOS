@@ -10,4 +10,6 @@ target 'withpet_iOS' do
   pod 'Then'
   pod 'MaterialComponents/Chips'
   pod 'Cosmos', '~> 23.0'
+  pod "BSImagePicker", "~> 3.1"
+  pod "FlexibleSteppedProgressBar"
 end
