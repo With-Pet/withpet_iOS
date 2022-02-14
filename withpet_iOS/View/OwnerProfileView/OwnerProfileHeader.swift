@@ -8,12 +8,17 @@
 import UIKit
 import MaterialComponents
 
+protocol OwnerProfileHeaderDelegate: class {
+    func didTapViewPosts()
+}
 private let reuseIdentfier = "chipCell"
 class OwnerProfileHeader: UICollectionReusableView {
 
     //MARK: - Properties
     
     let services = ["병원","목욕","집 앞 픽업","미용","소독"]
+    
+    weak var delegate: OwnerProfileHeaderDelegate?
     
     private lazy var headerContainerView = UIView().then {
         $0.backgroundColor = .white
@@ -91,6 +96,13 @@ class OwnerProfileHeader: UICollectionReusableView {
             make.left.equalTo(careStack.snp.right).offset(50)
         }
 
+        $0.addSubview(viewPostButton)
+        viewPostButton.snp.makeConstraints { make in
+            make.top.equalTo(exprienceStack.snp.bottom).offset(25)
+            make.leading.equalToSuperview().offset(60)
+            make.trailing.equalToSuperview().offset(-60)
+            make.height.equalTo(60)
+        }
         let ul1 = UIView()
         ul1.backgroundColor = .lightGray
 
@@ -171,7 +183,14 @@ class OwnerProfileHeader: UICollectionReusableView {
         $0.font = UIFont.systemFont(ofSize: 16)
     }
     
-    
+    private let viewPostButton = UIButton().then {
+        $0.backgroundColor = .mainColor
+        $0.setTitle("게시물 모아보기", for: .normal)
+        $0.setTitleColor(.white, for: .normal)
+        $0.titleLabel?.font = .systemFont(ofSize: 16)
+        $0.layer.cornerRadius = 5
+        $0.addTarget(self, action: #selector(handleViewPosts), for: .touchUpInside)
+    }
     private lazy var introContrainerView = UIView().then {
         
         $0.addSubview(introTitleLabel)
@@ -256,7 +275,7 @@ class OwnerProfileHeader: UICollectionReusableView {
         headerContainerView.snp.makeConstraints { make in
             make.top.equalToSuperview()
             make.width.equalToSuperview()
-            make.height.equalTo(260)
+            make.height.equalTo(400)
         }
         
         addSubview(introContrainerView)
@@ -296,11 +315,8 @@ class OwnerProfileHeader: UICollectionReusableView {
     
     func configureCollectionView(){
         let layout = MDCChipCollectionViewFlowLayout()
-//        let layout = UICollectionViewFlowLayout()
-//        layout.minimumLineSpacing = 10
-//        layout.minimumInteritemSpacing = 16
+
         layout.sectionInset = .init(top: 5, left: 16, bottom: 5, right: 16)
-//
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: layout)
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.backgroundColor = .white
@@ -308,6 +324,10 @@ class OwnerProfileHeader: UICollectionReusableView {
         collectionView.dataSource = self
         
         collectionView.register(MDCChipCollectionViewCell.self,forCellWithReuseIdentifier: reuseIdentfier)
+    }
+            
+    @objc func handleViewPosts() {
+        delegate?.didTapViewPosts()
     }
 }
 
@@ -327,8 +347,4 @@ extension OwnerProfileHeader: UICollectionViewDelegate, UICollectionViewDataSour
         
         return cell
     }
-
-//    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-//        return ChipCell.fittingSize(availableHeight: 45, name: services[indexPath.row])
-//    }
 }
