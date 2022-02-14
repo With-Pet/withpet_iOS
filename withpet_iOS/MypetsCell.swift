@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class PetFeedCell: UITableViewCell {
+class MypetsCell: UITableViewCell {
     
     //MARK: - LifeCycle
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
