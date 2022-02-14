@@ -12,10 +12,15 @@ import SnapKit
 
 class ProfileListCell : UITableViewCell {
     
+    var icon = UIImageView().then {
+        $0.backgroundColor = .white
+        $0.tintColor = .black
+
+    }
     var label = UILabel().then {
         $0.text = "text"
         $0.textColor = .black
-        $0.font = UIFont.systemFont(ofSize: 24)
+        $0.font = UIFont.systemFont(ofSize: 20)
         $0.textAlignment = .left
     }
     
@@ -24,9 +29,16 @@ class ProfileListCell : UITableViewCell {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         
         self.backgroundColor = .white
+        
+        addSubview(icon)
+        icon.snp.makeConstraints { make in
+            make.left.equalToSuperview().offset(30)
+            make.centerY.equalToSuperview()
+            make.height.width.equalTo(30)
+        }
         addSubview(label)
         label.snp.makeConstraints { make in
-            make.leading.equalToSuperview().offset(20)
+            make.left.equalTo(icon.snp.right).offset(30)
             make.centerY.equalToSuperview()
         }
         
