@@ -32,7 +32,7 @@ class AddCertificationController: UIViewController {
             make.height.equalTo(60)
         }
         
-        let label = Utilities().makeLabel(text: "자격증 이름")
+        let label = Utilities().makeLabel(with: "자격증 이름",font: 20)
         $0.addSubview(label)
         
         label.snp.makeConstraints { make in
@@ -66,7 +66,7 @@ class AddCertificationController: UIViewController {
             make.height.equalTo(60)
         }
         
-        let label = Utilities().makeLabel(text: "발행 기관")
+        let label = Utilities().makeLabel(with: "발행 기관", font: 20)
         $0.addSubview(label)
         
         label.snp.makeConstraints { make in
@@ -97,7 +97,7 @@ class AddCertificationController: UIViewController {
             make.width.equalTo(300)
             make.height.equalTo(60)
         }
-        let label = Utilities().makeLabel(text: "발행 일시")
+        let label = Utilities().makeLabel(with: "발행 일시",font:20)
         $0.addSubview(label)
         
         label.snp.makeConstraints { make in
@@ -117,7 +117,6 @@ class AddCertificationController: UIViewController {
         $0.layer.cornerRadius = 5
         $0.backgroundColor = .mainColor
         $0.addTarget(self, action: #selector(didTapCompleted), for: .touchUpInside)
-
     }
     
     override func viewDidLoad() {
