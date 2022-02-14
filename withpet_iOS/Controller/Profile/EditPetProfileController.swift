@@ -263,6 +263,7 @@ class EditPetProfileController: UIViewController {
         $0.textColor = .darkText // Set left justified.
         $0.textAlignment = .left
         $0.isEditable = true
+        $0.textContainerInset = UIEdgeInsets(top: 15, left: 15, bottom: 15, right: 15)
         $0.text = "간단한 소개나 주의사항을 적어주세요 :)"
     }
     
@@ -339,7 +340,7 @@ class EditPetProfileController: UIViewController {
     }
     //MARK: - selector
     @objc func handleDismissal(){
-        dismiss(animated: false, completion: nil)
+        navigationController?.popViewController(animated: true)
     }
     @objc func handleDone() {
         print("DEBUG : handle done button")
