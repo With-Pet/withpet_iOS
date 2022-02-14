@@ -32,7 +32,7 @@ class ReviewsController: UITableViewController {
 
     //MARK: - selector
     @objc func handleDismissal() {
-        dismiss(animated: false, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
     // MARK: - Table view data source
     
