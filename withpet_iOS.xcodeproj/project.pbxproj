@@ -36,6 +36,16 @@
 		78131FD427B2911C0003B9F8 /* OnwerProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */; };
 		78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD527B3A46B0003B9F8 /* RatingView.swift */; };
 		78131FD827B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */; };
+		78A8EF1627B6575400B67C70 /* AddReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1527B6575400B67C70 /* AddReviewController.swift */; };
+		78A8EF1827B6759D00B67C70 /* ReviewPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1727B6759D00B67C70 /* ReviewPhotoCell.swift */; };
+		78A8EF1B27B6A72300B67C70 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1A27B6A72300B67C70 /* RegisterController.swift */; };
+		78A8EF1D27B7E2D600B67C70 /* MyPetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1C27B7E2D600B67C70 /* MyPetsController.swift */; };
+		78A8EF1F27B7E30A00B67C70 /* MyPetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1E27B7E30A00B67C70 /* MyPetCell.swift */; };
+		78A8EF2127B95CEF00B67C70 /* FollowedCaresController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2027B95CEE00B67C70 /* FollowedCaresController.swift */; };
+		78A8EF2327B95D1700B67C70 /* FollowedCareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */; };
+		78A8EF2527B9747E00B67C70 /* FollowedPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */; };
+		78A8EF2727BA160A00B67C70 /* FollowedPostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2627BA160A00B67C70 /* FollowedPostsController.swift */; };
+		78A8EF2927BA78EE00B67C70 /* PostProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2827BA78ED00B67C70 /* PostProgressBar.swift */; };
 		A881FCD7F1CD861940790D92 /* Pods_withpet_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -72,6 +82,16 @@
 		78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnwerProfileFooter.swift; sourceTree = "<group>"; };
 		78131FD527B3A46B0003B9F8 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerProfileHeader.swift; sourceTree = "<group>"; };
+		78A8EF1527B6575400B67C70 /* AddReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewController.swift; sourceTree = "<group>"; };
+		78A8EF1727B6759D00B67C70 /* ReviewPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPhotoCell.swift; sourceTree = "<group>"; };
+		78A8EF1A27B6A72300B67C70 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
+		78A8EF1C27B7E2D600B67C70 /* MyPetsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsController.swift; sourceTree = "<group>"; };
+		78A8EF1E27B7E30A00B67C70 /* MyPetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetCell.swift; sourceTree = "<group>"; };
+		78A8EF2027B95CEE00B67C70 /* FollowedCaresController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedCaresController.swift; sourceTree = "<group>"; };
+		78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedCareCell.swift; sourceTree = "<group>"; };
+		78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedPostCell.swift; sourceTree = "<group>"; };
+		78A8EF2627BA160A00B67C70 /* FollowedPostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedPostsController.swift; sourceTree = "<group>"; };
+		78A8EF2827BA78ED00B67C70 /* PostProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProgressBar.swift; sourceTree = "<group>"; };
 		B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_withpet_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B999708DD4F9F15E78E5B7B3 /* Pods-withpet_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.release.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +163,7 @@
 				78080AFE27A835CF0043461C /* PostController.swift */,
 				78080B0027A835DC0043461C /* ChatController.swift */,
 				78131F5F27AC24580003B9F8 /* Profile */,
+				78A8EF1927B67F4F00B67C70 /* Review */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -151,8 +172,8 @@
 			isa = PBXGroup;
 			children = (
 				78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */,
-				78131F9627AEAE150003B9F8 /* ReviewCell.swift */,
-				78131FD527B3A46B0003B9F8 /* RatingView.swift */,
+				78A8EF2827BA78ED00B67C70 /* PostProgressBar.swift */,
+				78A8EF2A27BA78F300B67C70 /* Review */,
 				78131FCA27B194760003B9F8 /* OwnerProfileView */,
 			);
 			path = View;
@@ -162,12 +183,14 @@
 			isa = PBXGroup;
 			children = (
 				78080B0227A835E50043461C /* ProfileListController.swift */,
-				78131F6027AC248C0003B9F8 /* OwnerProfileController.swift */,
 				78131F9027AE49540003B9F8 /* EditOwnerProfileController.swift */,
+				78A8EF1C27B7E2D600B67C70 /* MyPetsController.swift */,
+				78131F9827AF9D310003B9F8 /* EditPetProfileController.swift */,
+				78A8EF2027B95CEE00B67C70 /* FollowedCaresController.swift */,
+				78A8EF2627BA160A00B67C70 /* FollowedPostsController.swift */,
+				78131F6027AC248C0003B9F8 /* OwnerProfileController.swift */,
 				78131F8727AD1B820003B9F8 /* AddCertificationController.swift */,
 				78131F8C27AD6E820003B9F8 /* PetProfileController.swift */,
-				78131F9827AF9D310003B9F8 /* EditPetProfileController.swift */,
-				78131F9427AEADF80003B9F8 /* ReviewsController.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -185,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				78131F9C27AFB83F0003B9F8 /* LoginController.swift */,
+				78A8EF1A27B6A72300B67C70 /* RegisterController.swift */,
 			);
 			path = Authentication;
 			sourceTree = "<group>";
@@ -196,8 +220,30 @@
 				78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */,
 				78131F6527AC39A40003B9F8 /* CertificationCell.swift */,
 				78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */,
+				78A8EF1E27B7E30A00B67C70 /* MyPetCell.swift */,
+				78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */,
+				78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */,
 			);
 			path = OwnerProfileView;
+			sourceTree = "<group>";
+		};
+		78A8EF1927B67F4F00B67C70 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				78131F9427AEADF80003B9F8 /* ReviewsController.swift */,
+				78A8EF1527B6575400B67C70 /* AddReviewController.swift */,
+			);
+			path = Review;
+			sourceTree = "<group>";
+		};
+		78A8EF2A27BA78F300B67C70 /* Review */ = {
+			isa = PBXGroup;
+			children = (
+				78131F9627AEAE150003B9F8 /* ReviewCell.swift */,
+				78131FD527B3A46B0003B9F8 /* RatingView.swift */,
+				78A8EF1727B6759D00B67C70 /* ReviewPhotoCell.swift */,
+			);
+			path = Review;
 			sourceTree = "<group>";
 		};
 		F5CDC302377CE6D4959A56FA /* Frameworks */ = {
@@ -325,29 +371,39 @@
 				78080AFF27A835CF0043461C /* PostController.swift in Sources */,
 				78131F9927AF9D320003B9F8 /* EditPetProfileController.swift in Sources */,
 				78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */,
+				78A8EF1627B6575400B67C70 /* AddReviewController.swift in Sources */,
 				78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */,
 				78131F6627AC39A40003B9F8 /* CertificationCell.swift in Sources */,
 				78131FD427B2911C0003B9F8 /* OnwerProfileFooter.swift in Sources */,
 				78080B0827AA6A340043461C /* MypetsCell.swift in Sources */,
+				78A8EF1D27B7E2D600B67C70 /* MyPetsController.swift in Sources */,
 				78080AFD27A835BE0043461C /* ReservationController.swift in Sources */,
 				78080AEB27A831BF0043461C /* MainTapController.swift in Sources */,
 				78080B0127A835DC0043461C /* ChatController.swift in Sources */,
+				78A8EF2327B95D1700B67C70 /* FollowedCareCell.swift in Sources */,
 				78131F9F27B0E8980003B9F8 /* OwnerProfileHeader.swift in Sources */,
 				78080B0B27AA7F690043461C /* FilterController.swift in Sources */,
 				78131F9D27AFB83F0003B9F8 /* LoginController.swift in Sources */,
 				78131F6127AC248C0003B9F8 /* OwnerProfileController.swift in Sources */,
 				78080AE727A831BF0043461C /* AppDelegate.swift in Sources */,
+				78A8EF2527B9747E00B67C70 /* FollowedPostCell.swift in Sources */,
+				78A8EF2727BA160A00B67C70 /* FollowedPostsController.swift in Sources */,
+				78A8EF2127B95CEF00B67C70 /* FollowedCaresController.swift in Sources */,
 				78131F8A27AD22320003B9F8 /* Utilities.swift in Sources */,
 				78131F9727AEAE150003B9F8 /* ReviewCell.swift in Sources */,
 				78131F6427AC25F60003B9F8 /* Extensions.swift in Sources */,
 				78131F9127AE49540003B9F8 /* EditOwnerProfileController.swift in Sources */,
+				78A8EF1B27B6A72300B67C70 /* RegisterController.swift in Sources */,
 				78131F8827AD1B820003B9F8 /* AddCertificationController.swift in Sources */,
 				78080AFB27A835A40043461C /* FeedController.swift in Sources */,
 				78131FD827B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift in Sources */,
+				78A8EF1F27B7E30A00B67C70 /* MyPetCell.swift in Sources */,
 				78080B0327A835E50043461C /* ProfileListController.swift in Sources */,
+				78A8EF2927BA78EE00B67C70 /* PostProgressBar.swift in Sources */,
 				78131F8D27AD6E820003B9F8 /* PetProfileController.swift in Sources */,
 				78080B0627AA61560043461C /* SearchController.swift in Sources */,
 				78080AE927A831BF0043461C /* SceneDelegate.swift in Sources */,
+				78A8EF1827B6759D00B67C70 /* ReviewPhotoCell.swift in Sources */,
 				78131F9527AEADF80003B9F8 /* ReviewsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
