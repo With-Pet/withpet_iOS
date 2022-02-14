@@ -11,6 +11,8 @@ private let headerIdentifier = "EditProfileHeader"
 private let reuseIdentifier = "CertificationCell"
 class EditOwnerProfileController: UICollectionViewController {
     
+    var data = [1,2,3,4]
+    
     private let imagePicker = UIImagePickerController()
     
     private var selectedImage:UIImage? {
@@ -31,6 +33,7 @@ class EditOwnerProfileController: UICollectionViewController {
         collectionView.register(EditOwnerProfileHeader.self, forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader, withReuseIdentifier: headerIdentifier)
         collectionView.register(CertificationCell.self, forCellWithReuseIdentifier: reuseIdentifier)
     }
+    
     func configureNavigationbar() {
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = "내 프로필"
@@ -39,6 +42,7 @@ class EditOwnerProfileController: UICollectionViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(handleDismissal))
         navigationItem.rightBarButtonItem = UIBarButtonItem(image: UIImage(named: "outline_done_black_36pt"), style: .done, target: self, action: #selector(handleDone))
     }
+    
     func configureImagePicker() {
         imagePicker.delegate = self
         imagePicker.allowsEditing = true
@@ -67,12 +71,26 @@ extension EditOwnerProfileController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
+        return data.count
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CertificationCell
         return cell
+    }
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let alert = UIAlertController(title: "삭제", message: "삭제할래?", preferredStyle: .actionSheet)
+        
+        let cancel = UIAlertAction(title: "취소", style: .cancel, handler: nil)
+        let delete = UIAlertAction(title: "삭제", style: .destructive) {_ in
+            self.data.remove(at: indexPath.row)
+            collectionView.deleteItems(at: [indexPath])
+        }
+        
+        alert.addAction(cancel)
+        alert.addAction(delete)
+        
+        present(alert, animated: true)
     }
 }
 
