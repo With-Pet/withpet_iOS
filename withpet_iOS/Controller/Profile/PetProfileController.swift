@@ -205,7 +205,7 @@ class PetProfileController: UIViewController {
     private let moreButton = UIButton().then {
         $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
         $0.tintColor = .black
-        $0.addTarget(self, action: #selector(didTapMoreButton), for: .touchUpInside)
+        $0.addTarget(self, action: #selector(didTapCompleted), for: .touchUpInside)
     }
     
     private lazy var ratingContainer = UIView().then {
@@ -318,11 +318,10 @@ class PetProfileController: UIViewController {
     
     //MARK: - selector
     @objc func handleDismissal() {
-        dismiss(animated: false, completion: nil)
+        navigationController?.popViewController(animated: false)
     }
 
-    @objc func didTapMoreButton(){
+    @objc func didTapCompleted(){
         
     }
-
 }
