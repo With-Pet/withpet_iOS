@@ -28,6 +28,7 @@ class LoginController: UIViewController {
         $0.textAlignment = .left
         $0.textColor = .lightGray
     }
+    
     private let introduceLabel = UILabel().then {
         $0.numberOfLines = 0
         
