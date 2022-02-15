@@ -11,6 +11,7 @@ class RegisterController: UIViewController {
 
     //MARK: - Properties
     private let imagePicker = UIImagePickerController()
+    
     private var profileImage : UIImage?
     
     private let plusPhotoButton : UIButton = {
