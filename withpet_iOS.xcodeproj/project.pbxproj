@@ -45,7 +45,6 @@
 		78A8EF2327B95D1700B67C70 /* FollowedCareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */; };
 		78A8EF2527B9747E00B67C70 /* FollowedPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */; };
 		78A8EF2727BA160A00B67C70 /* FollowedPostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2627BA160A00B67C70 /* FollowedPostsController.swift */; };
-		78A8EF2927BA78EE00B67C70 /* PostProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2827BA78ED00B67C70 /* PostProgressBar.swift */; };
 		A881FCD7F1CD861940790D92 /* Pods_withpet_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -91,7 +90,6 @@
 		78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedCareCell.swift; sourceTree = "<group>"; };
 		78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedPostCell.swift; sourceTree = "<group>"; };
 		78A8EF2627BA160A00B67C70 /* FollowedPostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedPostsController.swift; sourceTree = "<group>"; };
-		78A8EF2827BA78ED00B67C70 /* PostProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostProgressBar.swift; sourceTree = "<group>"; };
 		B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_withpet_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B999708DD4F9F15E78E5B7B3 /* Pods-withpet_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.release.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -172,7 +170,6 @@
 			isa = PBXGroup;
 			children = (
 				78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */,
-				78A8EF2827BA78ED00B67C70 /* PostProgressBar.swift */,
 				78A8EF2A27BA78F300B67C70 /* Review */,
 				78131FCA27B194760003B9F8 /* OwnerProfileView */,
 			);
@@ -399,7 +396,6 @@
 				78131FD827B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift in Sources */,
 				78A8EF1F27B7E30A00B67C70 /* MyPetCell.swift in Sources */,
 				78080B0327A835E50043461C /* ProfileListController.swift in Sources */,
-				78A8EF2927BA78EE00B67C70 /* PostProgressBar.swift in Sources */,
 				78131F8D27AD6E820003B9F8 /* PetProfileController.swift in Sources */,
 				78080B0627AA61560043461C /* SearchController.swift in Sources */,
 				78080AE927A831BF0043461C /* SceneDelegate.swift in Sources */,

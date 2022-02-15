@@ -9,6 +9,7 @@ import UIKit
 
 class ReviewCell: UITableViewCell {
     
+    //MARK: - Properties
     private lazy var viewContainer = UIView().then {
         $0.backgroundColor = .white
         

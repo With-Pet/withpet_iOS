@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 extension UIColor {
+    
     static func hexStringToUIColor(_ hex:String) -> UIColor {
         var cString:String = hex.trimmingCharacters(in: .whitespacesAndNewlines).uppercased()
         

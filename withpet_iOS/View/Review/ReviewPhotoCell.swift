@@ -9,6 +9,7 @@ import UIKit
 
 class ReviewPhotoCell: UICollectionViewCell {
     
+    //MARK: - Properties
     var imageView = UIImageView()
     
     override init(frame:CGRect){
