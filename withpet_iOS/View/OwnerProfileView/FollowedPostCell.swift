@@ -9,6 +9,7 @@ import UIKit
 
 class FollowedPostCell: UITableViewCell {
 
+    //MARK: - Properties
     private lazy var containerView = UIView()
     
     private lazy var innerView = UIView().then {
@@ -158,6 +159,7 @@ class FollowedPostCell: UITableViewCell {
         setupLayout()
     }
     
+    //MARK: - Configure
     func setupLayout() {
 //        headerContainerView.clipsToBounds = true
         containerView.layer.shadowColor = UIColor.black.cgColor

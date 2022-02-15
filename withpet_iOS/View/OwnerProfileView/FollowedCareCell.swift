@@ -12,6 +12,7 @@ private let reuseIdentfier = "ChipCell"
 
 class FollowedCareCell: UITableViewCell {
 
+    //MARK: - Properties
     private let list = ["목욕","집앞 픽업","미용","소독","마당 보유"]
     
     private lazy var headerContainerView = UIView().then {
@@ -114,6 +115,7 @@ class FollowedCareCell: UITableViewCell {
         setupLayout()
     }
 
+    //MARK: - Configure
     func configureCollectionView(){
         let layout = MDCChipCollectionViewFlowLayout()
         layout.sectionInset = .init(top: 5, left: 16, bottom: 5, right: 16)

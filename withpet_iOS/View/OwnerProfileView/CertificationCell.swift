@@ -9,8 +9,8 @@ import Foundation
 import UIKit
 
 class CertificationCell:UICollectionViewCell {
-    //MARK: - Properties
     
+    //MARK: - Properties
     private let certiciationLabel = UILabel().then {
         $0.textColor = .black
         $0.font = .boldSystemFont(ofSize: 24)

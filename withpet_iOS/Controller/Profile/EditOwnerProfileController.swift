@@ -11,6 +11,7 @@ private let headerIdentifier = "EditProfileHeader"
 private let reuseIdentifier = "CertificationCell"
 class EditOwnerProfileController: UICollectionViewController {
     
+    //MARK: - Properties
     var data = [1,2,3,4]
     
     private let imagePicker = UIImagePickerController()
@@ -27,6 +28,7 @@ class EditOwnerProfileController: UICollectionViewController {
         configureNavigationbar()
     }
     
+    //MARK: - Configure
     func configureUI() {
         view.backgroundColor = .white
         collectionView.backgroundColor = .white

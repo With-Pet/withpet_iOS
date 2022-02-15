@@ -10,6 +10,8 @@ import UIKit
 private let reuseIdentifier = "FollowedCareCell"
 class FollowedCaresController: UITableViewController {
 
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureNavigationbar()
@@ -19,6 +21,7 @@ class FollowedCaresController: UITableViewController {
         tableView.rowHeight = 250
     }
     
+    //MARK: - Configure
     func configureNavigationbar() {
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = "찜한 돌봄이"
@@ -27,6 +30,7 @@ class FollowedCaresController: UITableViewController {
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(handleDismissal))
     }
     
+    //MARK: - selector
     @objc func handleDismissal() {
         dismiss(animated: true, completion: nil)
     }

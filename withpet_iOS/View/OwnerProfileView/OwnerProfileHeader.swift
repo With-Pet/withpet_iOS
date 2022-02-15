@@ -15,7 +15,6 @@ private let reuseIdentfier = "chipCell"
 class OwnerProfileHeader: UICollectionReusableView {
 
     //MARK: - Properties
-    
     let services = ["병원","목욕","집 앞 픽업","미용","소독"]
     
     weak var delegate: OwnerProfileHeaderDelegate?
@@ -313,6 +312,7 @@ class OwnerProfileHeader: UICollectionReusableView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    //MARK: - Configure
     func configureCollectionView(){
         let layout = MDCChipCollectionViewFlowLayout()
 

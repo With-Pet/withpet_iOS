@@ -17,7 +17,6 @@ private let reuseIdentfier = "ChipCell"
 class EditOwnerProfileHeader: UICollectionReusableView {
     
     //MARK: - Properties
-    
     let services = ["병원","목욕","픽업","미용","소독"]
     
     weak var delegate : EditOwnerProfileHeaderDelegate?
