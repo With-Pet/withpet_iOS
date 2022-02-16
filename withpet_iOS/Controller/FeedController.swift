@@ -43,7 +43,7 @@ class FeedController: UITableViewController {
     //MARK: - Configure
     func configureUI() {
         view.backgroundColor = .white
-        tableView.register(MypetsCell.self, forCellReuseIdentifier: reuseIdentifier)
+        tableView.register(PostFeedCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 100
         
@@ -81,7 +81,7 @@ class FeedController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? MypetsCell else { return UITableViewCell()}
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath) as? PostFeedCell else { return UITableViewCell()}
         cell.selectionStyle = .none
         return cell
     }
