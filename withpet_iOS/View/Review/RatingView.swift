@@ -10,6 +10,7 @@ import Cosmos
 
 class RatingView: UIView {
 
+    //MARK: - Properties
     private let cosmosView = CosmosView(settings: .default)
     
     private let ratingLabel = UILabel().then {

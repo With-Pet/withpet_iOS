@@ -13,6 +13,7 @@ protocol OwnerProfileFooterDeleagte : class {
 }
 class OnwerProfileFooter: UICollectionReusableView {
     
+    //MARK: - Properties
     weak var delegate : OwnerProfileFooterDeleagte?
     
     private var titleLabel = UILabel().then {

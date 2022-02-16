@@ -307,6 +307,8 @@ class PetProfileController: UIViewController {
             make.height.equalTo(220)
         }
     }
+    
+    //MARK: - Configure
     func configureNavigationbar() {
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = "프로필"

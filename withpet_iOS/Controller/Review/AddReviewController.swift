@@ -13,6 +13,7 @@ import PhotosUI
 private let reuseIdentifier = "PhotoCell"
 class AddReviewController: UIViewController {
     
+    //MARK: - Properties
     private let collectionView : UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         layout.itemSize = CGSize(width: 80, height: 80)
@@ -111,6 +112,7 @@ class AddReviewController: UIViewController {
         //        $0.imageEdgeInsets = UIEdgeInsets(top: 15, left: 20, bottom: 30, right: 20)
     }
     
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()

@@ -45,19 +45,6 @@ class Utilities {
         }
         return tf
     }
-//    func underlineTextField(withPlaceholder placeholder:String,font size:Int) -> UITextField {
-//        let tf = UITextField()
-//        tf.backgroundColor = .white
-//        tf.text = placeholder
-//        tf.textColor = .black
-//        tf.textAlignment = .left
-//        tf.font = .systemFont(ofSize: CGFloat(size))
-//        tf.clearButtonMode = .whileEditing
-//        tf.tintColor = .black
-//        
-////        tf.layer.addSublayer(border)
-//        return tf
-//    }
     
     func heightForView(text:String,font:UIFont,width:CGFloat) -> CGFloat {
         let label = UILabel(frame: CGRect(x: 0, y: 0, width: width, height: CGFloat.greatestFiniteMagnitude))

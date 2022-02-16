@@ -11,6 +11,8 @@ private let reuseIdentifier = "MyPetCell"
 
 class MyPetsController: UICollectionViewController {
 
+    //MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .white
@@ -39,6 +41,7 @@ class MyPetsController: UICollectionViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
 }
+
 extension MyPetsController {
     // MARK: UICollectionViewDataSource
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

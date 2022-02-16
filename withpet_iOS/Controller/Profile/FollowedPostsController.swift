@@ -10,6 +10,7 @@ import UIKit
 private let reuseIdentifier = "FollowedPostCell"
 class FollowedPostsController: UITableViewController {
 
+    //MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         configure()
@@ -17,6 +18,7 @@ class FollowedPostsController: UITableViewController {
         
     }
 
+    //MARK: - Configure
     func configureNavigationbar() {
         navigationController?.navigationBar.isHidden = false
         navigationItem.title = "찜한 게시물"
@@ -36,8 +38,8 @@ class FollowedPostsController: UITableViewController {
     @objc func handleDismissal() {
         dismiss(animated: false, completion: nil)
     }
+    
     // MARK: - Table view data source
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return 5

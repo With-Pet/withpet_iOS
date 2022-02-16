@@ -12,7 +12,7 @@ private let reuseIdentifier = "ProfileListCell"
 
 class ProfileListController : UITableViewController {
     
-    private let list = ["내 프로필 관리하기","반려동물 프로필 관리하기","찜한 게시물","찜한 돌봄이","공지사항","FAQ","환경설정","로그아웃","회원 탈퇴"]
+    private let list = ["내 프로필 관리하기","반려동물 프로필 관리하기","찜한 게시물","찜한 돌봄이","공지사항","FAQ","환경 설정","로그아웃","회원 탈퇴"]
 
     private let icon = [UIImage(named: "person"),UIImage(named:"pets"),
                         UIImage(named: "star"),UIImage(named: "favorite")

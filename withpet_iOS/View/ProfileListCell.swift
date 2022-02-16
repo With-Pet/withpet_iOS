@@ -12,6 +12,7 @@ import SnapKit
 
 class ProfileListCell : UITableViewCell {
     
+    //MARK: - Properties
     var icon = UIImageView().then {
         $0.backgroundColor = .white
         $0.tintColor = .black

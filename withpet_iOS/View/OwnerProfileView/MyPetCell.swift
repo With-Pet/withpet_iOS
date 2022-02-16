@@ -9,6 +9,7 @@ import UIKit
 
 class MyPetCell: UICollectionViewCell {
     
+    //MARK: - Properties
     private let petImageView = UIImageView().then{
         $0.contentMode = .scaleAspectFit
         $0.clipsToBounds = true

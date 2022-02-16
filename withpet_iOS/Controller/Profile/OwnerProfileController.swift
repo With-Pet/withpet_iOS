@@ -95,6 +95,7 @@ class OwnerProfileController: UIViewController {
     
 }
 
+//MARK: - UICollectionViewDelegate,UICollectionViewDataSource
 extension OwnerProfileController : UICollectionViewDelegate,UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
@@ -121,6 +122,8 @@ extension OwnerProfileController : UICollectionViewDelegate,UICollectionViewData
         return cell
     }
 }
+
+//MARK: - UICollectionViewDelegateFlowLayout
 extension OwnerProfileController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
         

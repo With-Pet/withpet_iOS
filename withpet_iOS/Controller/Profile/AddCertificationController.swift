@@ -12,7 +12,6 @@ protocol AddCertificationControllerDelegate: class {
 }
 
 class AddCertificationController: UIViewController {
-    
     //MARK: - Properties
     weak var delegate : AddCertificationControllerDelegate?
     private let imagePicker = UIImagePickerController()
@@ -156,6 +155,7 @@ class AddCertificationController: UIViewController {
         }
     }
     
+    //MARK: - Lifecycle
     func configure() {
         datePicker.preferredDatePickerStyle = .automatic
         datePicker.datePickerMode = .date
