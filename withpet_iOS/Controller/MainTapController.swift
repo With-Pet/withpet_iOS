@@ -47,7 +47,7 @@ class MainTapController: UITabBarController {
         let resvVC = ReservationController()
         let nav2 = templateNavigationController(image: UIImage(named: "outline_event_note_black_36pt"), rootViewController: resvVC)
         
-        let postVC = PostController()
+        let postVC = PostStep1Controller()
         let nav3 = UINavigationController(rootViewController: postVC)
         
         let chatVC = ChatController()
@@ -69,7 +69,7 @@ class MainTapController: UITabBarController {
     
     //MARK: - selector
     @objc func didTapPlusButton() {
-        let nav = UINavigationController(rootViewController: PostController())
+        let nav = UINavigationController(rootViewController: PostStep1Controller())
         nav.modalPresentationStyle = .fullScreen
         present(nav, animated: false, completion: nil)
     }
