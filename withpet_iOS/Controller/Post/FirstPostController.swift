@@ -13,24 +13,7 @@ private let reuseIdentifier = "MyPetCell"
 class FirstPostController : UIViewController {
     
     //MARK: - Properties
-    private var selectedIndex : Int?
-    
     private var collectionView : UICollectionView!
-    
-    private let nextButton = UIButton().then {
-        $0.setTitle("다음", for: .normal)
-        $0.setImage(UIImage(systemName: "chevron.right"), for: .normal)
-
-        $0.setTitleColor(.black, for: .normal)
-        $0.imageView?.contentMode = .scaleAspectFit
-        $0.titleLabel?.font = .boldSystemFont(ofSize: 20)
-        $0.contentHorizontalAlignment = .center
-        $0.semanticContentAttribute = .forceRightToLeft
-
-        $0.setTitleColor(.mainColor, for: .normal)
-        $0.tintColor = .mainColor
-        $0.addTarget(self, action: #selector(didTapNextstep), for: .touchUpInside)
-    }
     
     //MARK: - LifeCycle
     override func viewDidLoad() {
@@ -49,15 +32,6 @@ class FirstPostController : UIViewController {
             make.left.right.equalToSuperview()
             make.top.bottom.equalTo(view.safeAreaLayoutGuide)
         }
-        
-        view.addSubview(nextButton)
-        nextButton.snp.makeConstraints { make in
-            make.right.equalToSuperview().offset(-20)
-            make.bottom.equalToSuperview().offset(-30)
-            make.width.equalTo(80)
-            make.height.equalTo(30)
-        }
-          
     }
     
     func configureNavigation(){
@@ -76,26 +50,14 @@ class FirstPostController : UIViewController {
     }
     
     //MARK: - Selector
-    @objc func didTapNextstep() {
-        if let index = selectedIndex {
-            let vc = SecondPostController()
-            navigationController?.pushViewController(vc, animated: true)
-        }else {
-            let alert = UIAlertController(title: "반드시 반려동물을 클릭해주세요!", message: .none, preferredStyle: .alert)
-            alert.addAction(UIAlertAction(title: "확인" , style: .default))
-            
-            present(alert,animated: true)
-        }
-    }
-    
     @objc func handleDismissal() {
         dismiss(animated: true)
     }
 }
 
 extension FirstPostController : UICollectionViewDataSource, UICollectionViewDelegate {
-    
     // MARK: UICollectionViewDataSource
+    
     func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
         switch kind {
         case UICollectionView.elementKindSectionHeader :
@@ -115,15 +77,9 @@ extension FirstPostController : UICollectionViewDataSource, UICollectionViewDele
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.selectedIndex = indexPath.row
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let selectedIndex = selectedIndex {
-            if selectedIndex == indexPath.row {
-                self.selectedIndex = nil
-            }
-        }
+        
+        let vc = SecondPostController()
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 
