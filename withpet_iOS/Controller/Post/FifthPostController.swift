@@ -322,25 +322,31 @@ extension FifthPostController : UICollectionViewDelegate,UICollectionViewDataSou
         cell.configure(name: services[indexPath.item])
         return cell
     }
-    //    func collectionView(_ collectionView: UICollectionView, shouldSelectItemAt indexPath: IndexPath) -> Bool {
-    //        self.isSelected[indexPath.item].toggle()
-    //    }
+
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        isSelected[indexPath.row].toggle()
+        isSelected[indexPath.row] = !isSelected[indexPath.row]
         
         let cell = collectionView.cellForItem(at: indexPath) as! ServiceCell
         cell.isSelected = isSelected[indexPath.row]
-        collectionView.reloadData()
         
     }
     
+    private func collectionView(collectionView: UICollectionView, didDeselectItemAtIndexPath indexPath: IndexPath) {
+        
+        isSelected[indexPath.row] = !isSelected[indexPath.row]
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! ServiceCell
+        cell.isSelected = isSelected[indexPath.row]
+    }
+
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
         isSelected[indexPath.row].toggle()
         
         let cell = collectionView.cellForItem(at: indexPath) as! ServiceCell
         cell.isSelected = isSelected[indexPath.row]
-        collectionView.reloadData()
     }
+    
+    
 }
 extension FifthPostController : UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
