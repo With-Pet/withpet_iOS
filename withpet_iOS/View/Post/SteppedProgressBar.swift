@@ -45,7 +45,6 @@ class SteppedProgressBar: UIView {
         progressBar.currentIndex = index
         progressBar.selectedOuterCircleLineWidth = 0
 
-        progressBar.selectedBackgoundColor = .systemMint
         progressBar.currentSelectedTextColor = .darkGray
         
         progressBar.currentSelectedCenterColor = .currentProgressColor
