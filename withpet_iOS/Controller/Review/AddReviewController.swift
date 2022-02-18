@@ -197,14 +197,12 @@ class AddReviewController: UIViewController {
         ratingView.settings.fillMode = .half
         ratingView.settings.starSize = 50
         reviewTextView.delegate = self
-        
     }
     
     func configureCollectionView() {
-
         collectionView.delegate = self
         collectionView.dataSource = self
-        collectionView.register(ReviewPhotoCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        collectionView.register(PhotoCell.self, forCellWithReuseIdentifier: reuseIdentifier)
             
     }
 
@@ -253,7 +251,7 @@ extension AddReviewController : UICollectionViewDelegate,UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ReviewPhotoCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! PhotoCell
         cell.imageView.image = images[indexPath.row]
         return cell
     }
