@@ -20,7 +20,6 @@ class Utilities {
     
     func textField(withPlaceholder placeholder:String) -> UITextField {
         let tf = UITextField()
-        tf.placeholder = placeholder
         tf.textColor = .darkText
         tf.font = UIFont.systemFont(ofSize: 16)
         tf.attributedPlaceholder = NSAttributedString(string: placeholder, attributes: [NSAttributedString.Key.foregroundColor : UIColor.lightGray])
@@ -43,6 +42,7 @@ class Utilities {
         if let inputView = inputView {
             tf.inputView = inputView
         }
+        
         return tf
     }
     

@@ -7,16 +7,21 @@
 
 import UIKit
 
-class ReviewPhotoCell: UICollectionViewCell {
-    
+class PhotoCell: UICollectionViewCell {
     //MARK: - Properties
+    static let reuseIdentifier = "PhotoCell"
+    
     var imageView = UIImageView()
     
     override init(frame:CGRect){
         super.init(frame: frame)
-        backgroundColor = .red
+        contentMode = .scaleAspectFit
+        layer.cornerRadius = 20
         addSubview(imageView)
-        imageView.layer.cornerRadius = 5
+//        imageView.snp.makeConstraints { make in
+//            make.top.bottom.left.right.equalToSuperview()
+//        }
+
     }
     
     required init?(coder: NSCoder) {

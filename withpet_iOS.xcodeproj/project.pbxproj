@@ -14,11 +14,10 @@
 		78080AF327A831C20043461C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78080AF127A831C20043461C /* LaunchScreen.storyboard */; };
 		78080AFB27A835A40043461C /* FeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFA27A835A40043461C /* FeedController.swift */; };
 		78080AFD27A835BE0043461C /* ReservationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFC27A835BE0043461C /* ReservationController.swift */; };
-		78080AFF27A835CF0043461C /* PostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFE27A835CF0043461C /* PostController.swift */; };
+		78080AFF27A835CF0043461C /* FirstPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AFE27A835CF0043461C /* FirstPostController.swift */; };
 		78080B0127A835DC0043461C /* ChatController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0027A835DC0043461C /* ChatController.swift */; };
 		78080B0327A835E50043461C /* ProfileListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0227A835E50043461C /* ProfileListController.swift */; };
 		78080B0627AA61560043461C /* SearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0527AA61560043461C /* SearchController.swift */; };
-		78080B0827AA6A340043461C /* MypetsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0727AA6A340043461C /* MypetsCell.swift */; };
 		78080B0B27AA7F690043461C /* FilterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080B0A27AA7F690043461C /* FilterController.swift */; };
 		78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */; };
 		78131F6127AC248C0003B9F8 /* OwnerProfileController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131F6027AC248C0003B9F8 /* OwnerProfileController.swift */; };
@@ -36,8 +35,18 @@
 		78131FD427B2911C0003B9F8 /* OnwerProfileFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */; };
 		78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD527B3A46B0003B9F8 /* RatingView.swift */; };
 		78131FD827B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */; };
+		786321EF27BCC55C0026D410 /* SteppedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786321EE27BCC55C0026D410 /* SteppedProgressBar.swift */; };
+		789DABD227BCD6A400084742 /* PostFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD127BCD6A400084742 /* PostFeedCell.swift */; };
+		789DABD427BCDB8200084742 /* SecondStepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD327BCDB8200084742 /* SecondStepController.swift */; };
+		789DABD627BCE00900084742 /* ThirdPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD527BCE00900084742 /* ThirdPostController.swift */; };
+		789DABD827BD392700084742 /* FourthPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD727BD392700084742 /* FourthPostController.swift */; };
+		789DABDA27BD4A1300084742 /* FifthPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD927BD4A1300084742 /* FifthPostController.swift */; };
+		789DABDC27BE07E100084742 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABDB27BE07E000084742 /* ServiceCell.swift */; };
+		789DABDE27BE135200084742 /* LastPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABDD27BE135200084742 /* LastPostController.swift */; };
+		789DABE127BEB52000084742 /* LastPostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABE027BEB52000084742 /* LastPostHeader.swift */; };
+		789DABE327BF63E000084742 /* FirstPostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABE227BF63DF00084742 /* FirstPostHeader.swift */; };
 		78A8EF1627B6575400B67C70 /* AddReviewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1527B6575400B67C70 /* AddReviewController.swift */; };
-		78A8EF1827B6759D00B67C70 /* ReviewPhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1727B6759D00B67C70 /* ReviewPhotoCell.swift */; };
+		78A8EF1827B6759D00B67C70 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1727B6759D00B67C70 /* PhotoCell.swift */; };
 		78A8EF1B27B6A72300B67C70 /* RegisterController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1A27B6A72300B67C70 /* RegisterController.swift */; };
 		78A8EF1D27B7E2D600B67C70 /* MyPetsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1C27B7E2D600B67C70 /* MyPetsController.swift */; };
 		78A8EF1F27B7E30A00B67C70 /* MyPetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF1E27B7E30A00B67C70 /* MyPetCell.swift */; };
@@ -59,11 +68,10 @@
 		78080AF427A831C20043461C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		78080AFA27A835A40043461C /* FeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedController.swift; sourceTree = "<group>"; };
 		78080AFC27A835BE0043461C /* ReservationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationController.swift; sourceTree = "<group>"; };
-		78080AFE27A835CF0043461C /* PostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostController.swift; sourceTree = "<group>"; };
+		78080AFE27A835CF0043461C /* FirstPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPostController.swift; sourceTree = "<group>"; };
 		78080B0027A835DC0043461C /* ChatController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatController.swift; sourceTree = "<group>"; };
 		78080B0227A835E50043461C /* ProfileListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListController.swift; sourceTree = "<group>"; };
 		78080B0527AA61560043461C /* SearchController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchController.swift; sourceTree = "<group>"; };
-		78080B0727AA6A340043461C /* MypetsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MypetsCell.swift; sourceTree = "<group>"; };
 		78080B0A27AA7F690043461C /* FilterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterController.swift; sourceTree = "<group>"; };
 		78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileListCell.swift; sourceTree = "<group>"; };
 		78131F6027AC248C0003B9F8 /* OwnerProfileController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerProfileController.swift; sourceTree = "<group>"; };
@@ -81,8 +89,18 @@
 		78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnwerProfileFooter.swift; sourceTree = "<group>"; };
 		78131FD527B3A46B0003B9F8 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerProfileHeader.swift; sourceTree = "<group>"; };
+		786321EE27BCC55C0026D410 /* SteppedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppedProgressBar.swift; sourceTree = "<group>"; };
+		789DABD127BCD6A400084742 /* PostFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedCell.swift; sourceTree = "<group>"; };
+		789DABD327BCDB8200084742 /* SecondStepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStepController.swift; sourceTree = "<group>"; };
+		789DABD527BCE00900084742 /* ThirdPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPostController.swift; sourceTree = "<group>"; };
+		789DABD727BD392700084742 /* FourthPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPostController.swift; sourceTree = "<group>"; };
+		789DABD927BD4A1300084742 /* FifthPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthPostController.swift; sourceTree = "<group>"; };
+		789DABDB27BE07E000084742 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
+		789DABDD27BE135200084742 /* LastPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPostController.swift; sourceTree = "<group>"; };
+		789DABE027BEB52000084742 /* LastPostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPostHeader.swift; sourceTree = "<group>"; };
+		789DABE227BF63DF00084742 /* FirstPostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPostHeader.swift; sourceTree = "<group>"; };
 		78A8EF1527B6575400B67C70 /* AddReviewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddReviewController.swift; sourceTree = "<group>"; };
-		78A8EF1727B6759D00B67C70 /* ReviewPhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewPhotoCell.swift; sourceTree = "<group>"; };
+		78A8EF1727B6759D00B67C70 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		78A8EF1A27B6A72300B67C70 /* RegisterController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterController.swift; sourceTree = "<group>"; };
 		78A8EF1C27B7E2D600B67C70 /* MyPetsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetsController.swift; sourceTree = "<group>"; };
 		78A8EF1E27B7E30A00B67C70 /* MyPetCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPetCell.swift; sourceTree = "<group>"; };
@@ -139,7 +157,6 @@
 				78080AE627A831BF0043461C /* AppDelegate.swift */,
 				78080AE827A831BF0043461C /* SceneDelegate.swift */,
 				78080B0927AA6A390043461C /* View */,
-				78080B0727AA6A340043461C /* MypetsCell.swift */,
 				78080B0427A835ED0043461C /* Controller */,
 				78131F6227AC25DA0003B9F8 /* Utilities */,
 				78080AEF27A831C20043461C /* Assets.xcassets */,
@@ -158,7 +175,7 @@
 				78080B0A27AA7F690043461C /* FilterController.swift */,
 				78080B0527AA61560043461C /* SearchController.swift */,
 				78080AFC27A835BE0043461C /* ReservationController.swift */,
-				78080AFE27A835CF0043461C /* PostController.swift */,
+				786321ED27BCC4D30026D410 /* Post */,
 				78080B0027A835DC0043461C /* ChatController.swift */,
 				78131F5F27AC24580003B9F8 /* Profile */,
 				78A8EF1927B67F4F00B67C70 /* Review */,
@@ -169,9 +186,12 @@
 		78080B0927AA6A390043461C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */,
+				789DABD127BCD6A400084742 /* PostFeedCell.swift */,
+				78A8EF1727B6759D00B67C70 /* PhotoCell.swift */,
+				789DABDB27BE07E000084742 /* ServiceCell.swift */,
+				789DABDF27BEB4F200084742 /* Post */,
 				78A8EF2A27BA78F300B67C70 /* Review */,
-				78131FCA27B194760003B9F8 /* OwnerProfileView */,
+				78131FCA27B194760003B9F8 /* Profile */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -210,9 +230,10 @@
 			path = Authentication;
 			sourceTree = "<group>";
 		};
-		78131FCA27B194760003B9F8 /* OwnerProfileView */ = {
+		78131FCA27B194760003B9F8 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */,
 				78131F9E27B0E8980003B9F8 /* OwnerProfileHeader.swift */,
 				78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */,
 				78131F6527AC39A40003B9F8 /* CertificationCell.swift */,
@@ -221,7 +242,30 @@
 				78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */,
 				78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */,
 			);
-			path = OwnerProfileView;
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		786321ED27BCC4D30026D410 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				78080AFE27A835CF0043461C /* FirstPostController.swift */,
+				789DABD327BCDB8200084742 /* SecondStepController.swift */,
+				789DABD527BCE00900084742 /* ThirdPostController.swift */,
+				789DABD727BD392700084742 /* FourthPostController.swift */,
+				789DABD927BD4A1300084742 /* FifthPostController.swift */,
+				789DABDD27BE135200084742 /* LastPostController.swift */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		789DABDF27BEB4F200084742 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				786321EE27BCC55C0026D410 /* SteppedProgressBar.swift */,
+				789DABE227BF63DF00084742 /* FirstPostHeader.swift */,
+				789DABE027BEB52000084742 /* LastPostHeader.swift */,
+			);
+			path = Post;
 			sourceTree = "<group>";
 		};
 		78A8EF1927B67F4F00B67C70 /* Review */ = {
@@ -238,7 +282,6 @@
 			children = (
 				78131F9627AEAE150003B9F8 /* ReviewCell.swift */,
 				78131FD527B3A46B0003B9F8 /* RatingView.swift */,
-				78A8EF1727B6759D00B67C70 /* ReviewPhotoCell.swift */,
 			);
 			path = Review;
 			sourceTree = "<group>";
@@ -365,14 +408,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				78080AFF27A835CF0043461C /* PostController.swift in Sources */,
+				789DABD427BCDB8200084742 /* SecondStepController.swift in Sources */,
+				789DABD227BCD6A400084742 /* PostFeedCell.swift in Sources */,
+				78080AFF27A835CF0043461C /* FirstPostController.swift in Sources */,
+				789DABDC27BE07E100084742 /* ServiceCell.swift in Sources */,
 				78131F9927AF9D320003B9F8 /* EditPetProfileController.swift in Sources */,
 				78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */,
 				78A8EF1627B6575400B67C70 /* AddReviewController.swift in Sources */,
+				786321EF27BCC55C0026D410 /* SteppedProgressBar.swift in Sources */,
+				789DABDE27BE135200084742 /* LastPostController.swift in Sources */,
+				789DABD627BCE00900084742 /* ThirdPostController.swift in Sources */,
 				78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */,
 				78131F6627AC39A40003B9F8 /* CertificationCell.swift in Sources */,
 				78131FD427B2911C0003B9F8 /* OnwerProfileFooter.swift in Sources */,
-				78080B0827AA6A340043461C /* MypetsCell.swift in Sources */,
 				78A8EF1D27B7E2D600B67C70 /* MyPetsController.swift in Sources */,
 				78080AFD27A835BE0043461C /* ReservationController.swift in Sources */,
 				78080AEB27A831BF0043461C /* MainTapController.swift in Sources */,
@@ -381,9 +429,12 @@
 				78131F9F27B0E8980003B9F8 /* OwnerProfileHeader.swift in Sources */,
 				78080B0B27AA7F690043461C /* FilterController.swift in Sources */,
 				78131F9D27AFB83F0003B9F8 /* LoginController.swift in Sources */,
+				789DABE327BF63E000084742 /* FirstPostHeader.swift in Sources */,
 				78131F6127AC248C0003B9F8 /* OwnerProfileController.swift in Sources */,
 				78080AE727A831BF0043461C /* AppDelegate.swift in Sources */,
 				78A8EF2527B9747E00B67C70 /* FollowedPostCell.swift in Sources */,
+				789DABD827BD392700084742 /* FourthPostController.swift in Sources */,
+				789DABE127BEB52000084742 /* LastPostHeader.swift in Sources */,
 				78A8EF2727BA160A00B67C70 /* FollowedPostsController.swift in Sources */,
 				78A8EF2127B95CEF00B67C70 /* FollowedCaresController.swift in Sources */,
 				78131F8A27AD22320003B9F8 /* Utilities.swift in Sources */,
@@ -395,11 +446,12 @@
 				78080AFB27A835A40043461C /* FeedController.swift in Sources */,
 				78131FD827B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift in Sources */,
 				78A8EF1F27B7E30A00B67C70 /* MyPetCell.swift in Sources */,
+				789DABDA27BD4A1300084742 /* FifthPostController.swift in Sources */,
 				78080B0327A835E50043461C /* ProfileListController.swift in Sources */,
 				78131F8D27AD6E820003B9F8 /* PetProfileController.swift in Sources */,
 				78080B0627AA61560043461C /* SearchController.swift in Sources */,
 				78080AE927A831BF0043461C /* SceneDelegate.swift in Sources */,
-				78A8EF1827B6759D00B67C70 /* ReviewPhotoCell.swift in Sources */,
+				78A8EF1827B6759D00B67C70 /* PhotoCell.swift in Sources */,
 				78131F9527AEADF80003B9F8 /* ReviewsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -469,7 +521,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -524,7 +576,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

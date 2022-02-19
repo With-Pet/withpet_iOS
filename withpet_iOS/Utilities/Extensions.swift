@@ -32,9 +32,11 @@ extension UIColor {
         )
     }
     
-    static let mainColor = UIColor.hexStringToUIColor("#6667AB")
+    static let mainColor = UIColor.hexStringToUIColor("6667AB")
     
-    static let barColor = UIColor.hexStringToUIColor("#373D7B")
+    static let barColor = UIColor.hexStringToUIColor("373D7B")
+    
+    static let currentProgressColor = UIColor.hexStringToUIColor("54BF00")
 }
 
 extension UITextField {
