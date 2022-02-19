@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7807962927C10C7000C0BF12 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7807962827C10C7000C0BF12 /* ServiceCell.swift */; };
 		78080AE727A831BF0043461C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AE627A831BF0043461C /* AppDelegate.swift */; };
 		78080AE927A831BF0043461C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AE827A831BF0043461C /* SceneDelegate.swift */; };
 		78080AEB27A831BF0043461C /* MainTapController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78080AEA27A831BF0043461C /* MainTapController.swift */; };
@@ -41,7 +42,6 @@
 		789DABD627BCE00900084742 /* ThirdPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD527BCE00900084742 /* ThirdPostController.swift */; };
 		789DABD827BD392700084742 /* FourthPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD727BD392700084742 /* FourthPostController.swift */; };
 		789DABDA27BD4A1300084742 /* FifthPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD927BD4A1300084742 /* FifthPostController.swift */; };
-		789DABDC27BE07E100084742 /* ServiceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABDB27BE07E000084742 /* ServiceCell.swift */; };
 		789DABDE27BE135200084742 /* LastPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABDD27BE135200084742 /* LastPostController.swift */; };
 		789DABE127BEB52000084742 /* LastPostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABE027BEB52000084742 /* LastPostHeader.swift */; };
 		789DABE327BF63E000084742 /* FirstPostHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABE227BF63DF00084742 /* FirstPostHeader.swift */; };
@@ -59,6 +59,7 @@
 
 /* Begin PBXFileReference section */
 		098C467463A208CD2D8C99E8 /* Pods-withpet_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.debug.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		7807962827C10C7000C0BF12 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		78080AE327A831BF0043461C /* withpet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = withpet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78080AE627A831BF0043461C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		78080AE827A831BF0043461C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +96,6 @@
 		789DABD527BCE00900084742 /* ThirdPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPostController.swift; sourceTree = "<group>"; };
 		789DABD727BD392700084742 /* FourthPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPostController.swift; sourceTree = "<group>"; };
 		789DABD927BD4A1300084742 /* FifthPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifthPostController.swift; sourceTree = "<group>"; };
-		789DABDB27BE07E000084742 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		789DABDD27BE135200084742 /* LastPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPostController.swift; sourceTree = "<group>"; };
 		789DABE027BEB52000084742 /* LastPostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastPostHeader.swift; sourceTree = "<group>"; };
 		789DABE227BF63DF00084742 /* FirstPostHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstPostHeader.swift; sourceTree = "<group>"; };
@@ -188,7 +188,7 @@
 			children = (
 				789DABD127BCD6A400084742 /* PostFeedCell.swift */,
 				78A8EF1727B6759D00B67C70 /* PhotoCell.swift */,
-				789DABDB27BE07E000084742 /* ServiceCell.swift */,
+				7807962827C10C7000C0BF12 /* ServiceCell.swift */,
 				789DABDF27BEB4F200084742 /* Post */,
 				78A8EF2A27BA78F300B67C70 /* Review */,
 				78131FCA27B194760003B9F8 /* Profile */,
@@ -411,7 +411,6 @@
 				789DABD427BCDB8200084742 /* SecondStepController.swift in Sources */,
 				789DABD227BCD6A400084742 /* PostFeedCell.swift in Sources */,
 				78080AFF27A835CF0043461C /* FirstPostController.swift in Sources */,
-				789DABDC27BE07E100084742 /* ServiceCell.swift in Sources */,
 				78131F9927AF9D320003B9F8 /* EditPetProfileController.swift in Sources */,
 				78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */,
 				78A8EF1627B6575400B67C70 /* AddReviewController.swift in Sources */,
@@ -421,6 +420,7 @@
 				78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */,
 				78131F6627AC39A40003B9F8 /* CertificationCell.swift in Sources */,
 				78131FD427B2911C0003B9F8 /* OnwerProfileFooter.swift in Sources */,
+				7807962927C10C7000C0BF12 /* ServiceCell.swift in Sources */,
 				78A8EF1D27B7E2D600B67C70 /* MyPetsController.swift in Sources */,
 				78080AFD27A835BE0043461C /* ReservationController.swift in Sources */,
 				78080AEB27A831BF0043461C /* MainTapController.swift in Sources */,
