@@ -40,9 +40,42 @@ extension UIColor {
 }
 
 extension UITextField {
-    func addLeftPadding() {
-        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
-        self.leftView = paddingView
+    
+    func addLeftPadding(image: UIImage?) {
+        
+        if let image = image {
+            let leftImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: 40, height: 40))
+            leftImageView.contentMode = .scaleToFill
+            leftImageView.image = image
+            self.leftView = leftImageView
+        } else {
+            let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: 10, height: self.frame.height))
+            self.leftView = paddingView
+        }
         self.leftViewMode = ViewMode.always
-      }
+    }
+    
+    func setDatePicker(target: Any, selector: Selector) {
+        let datePicker = UIDatePicker(frame: CGRect(x: 0, y: 0, width: bounds.width, height: 200))
+        datePicker.datePickerMode = .date
+        datePicker.preferredDatePickerStyle = .wheels
+        datePicker.locale = Locale(identifier: "ko-KR")
+        datePicker.timeZone = .autoupdatingCurrent
+
+        self.inputView = datePicker
+        
+        let toolBar = UIToolbar(frame: CGRect(x: 0.0, y: 0.0, width: bounds.width, height: 44.0))
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+        
+        let cancel = UIBarButtonItem(title: "취소", style: .plain, target: nil, action: #selector(tapCancel))
+        let barButton = UIBarButtonItem(title: "확인", style: .done, target: target, action: selector)
+        
+        toolBar.setItems([cancel, flexible, barButton], animated: false)
+        
+        self.inputAccessoryView = toolBar
+    }
+    
+    @objc func tapCancel() {
+        self.resignFirstResponder()
+    }
 }
