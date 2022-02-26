@@ -42,7 +42,7 @@ class LastPostHeader: UICollectionReusableView {
     }
     
     private let dateLabel = UILabel().then {
-        $0.text = "예약 날짜"
+        $0.text = "예약 기간"
         $0.textColor = .darkGray
         $0.font = .systemFont(ofSize: 14)
     }
