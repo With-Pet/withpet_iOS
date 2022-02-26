@@ -52,7 +52,7 @@ class ServiceCell: UICollectionViewCell {
         
         contentView.addSubview(titleLabel)
         titleLabel.snp.makeConstraints { (make) in
-            make.edges.equalToSuperview().inset(8)
+            make.edges.equalToSuperview().inset(10)
         }
     }
     
