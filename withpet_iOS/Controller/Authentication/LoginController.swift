@@ -6,9 +6,11 @@
 //
 
 import UIKit
+import KakaoSDKAuth
+import KakaoSDKUser
 
 class LoginController: UIViewController {
-
+    
     private let imageView = UIImageView().then {
         $0.contentMode = .scaleAspectFit
         $0.clipsToBounds = true
@@ -33,13 +35,13 @@ class LoginController: UIViewController {
         $0.numberOfLines = 0
         
         let attributedTitle = NSMutableAttributedString(string: "우리의 반려동물에게\n제공하는", attributes: [NSAttributedString.Key.font : UIFont.systemFont(ofSize: 24)
-                ,NSAttributedString.Key.foregroundColor : UIColor.black])
+                                                                                                 ,NSAttributedString.Key.foregroundColor : UIColor.black])
         
         attributedTitle.append(NSAttributedString(string: " 최고의\n", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 24)
-                   ,NSAttributedString.Key.foregroundColor : UIColor.blue]))
+                                                                                 ,NSAttributedString.Key.foregroundColor : UIColor.blue]))
         
         attributedTitle.append(NSAttributedString(string: "맡김 서비스", attributes: [NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 24)
-                   ,NSAttributedString.Key.foregroundColor : UIColor.black]))
+                                                                                 ,NSAttributedString.Key.foregroundColor : UIColor.black]))
         
         $0.attributedText = attributedTitle
     }
@@ -62,7 +64,7 @@ class LoginController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         view.backgroundColor = .white
         
         view.addSubview(imageView)
@@ -127,12 +129,25 @@ class LoginController: UIViewController {
             make.width.equalTo(300)
             make.height.equalTo(45)
         }
-    
-        
     }
     
     @objc func handleLogin() {
-        print("Did tap login")
-    }
 
+        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("loginWithKakaoAccount() success.")
+
+                //do something
+                let token = oauthToken
+                print(oauthToken)
+                let accessToken = oauthToken?.accessToken
+                print(accessToken)
+
+            }
+        }
+    }
+    
 }
