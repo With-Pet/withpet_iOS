@@ -10,6 +10,8 @@ target 'withpet_iOS' do
   pod 'Then'
   pod 'MaterialComponents/Chips'
   pod 'Cosmos', '~> 23.0'
-  pod "BSImagePicker", "~> 3.1"
   pod "FlexibleSteppedProgressBar"
+  pod 'KakaoSDKCommon'  # 필수 요소를 담은 공통 모듈
+  pod 'KakaoSDKAuth'  # 카카오 로그인
+  pod 'KakaoSDKUser'
 end

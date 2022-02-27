@@ -31,13 +31,14 @@ class Utilities {
         tf.textColor = .black
         tf.backgroundColor = .white
         tf.text = text
-        tf.textAlignment = .natural
+        tf.textAlignment = .left
         tf.font = .systemFont(ofSize: 20)
         tf.clearButtonMode = .whileEditing
         tf.layer.borderColor = UIColor.lightGray.cgColor
         tf.layer.borderWidth = 1
         tf.layer.cornerRadius = 10
-        tf.addLeftPadding()
+        
+        tf.addLeftPadding(image: nil)
         
         if let inputView = inputView {
             tf.inputView = inputView

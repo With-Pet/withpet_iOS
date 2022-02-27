@@ -37,7 +37,12 @@
 		78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD527B3A46B0003B9F8 /* RatingView.swift */; };
 		78131FD827B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */; };
 		786321EF27BCC55C0026D410 /* SteppedProgressBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 786321EE27BCC55C0026D410 /* SteppedProgressBar.swift */; };
-		789DABD227BCD6A400084742 /* PostFeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD127BCD6A400084742 /* PostFeedCell.swift */; };
+		7897BBD427C3F2F8003CE1F2 /* DetailFeedController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7897BBD327C3F2F8003CE1F2 /* DetailFeedController.swift */; };
+		7897BBDC27C73EB6003CE1F2 /* DetailImageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7897BBDB27C73EB6003CE1F2 /* DetailImageController.swift */; };
+		7897BBDF27C74AE3003CE1F2 /* DetailFeedFooter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7897BBDE27C74AE3003CE1F2 /* DetailFeedFooter.swift */; };
+		7897BBE127C75580003CE1F2 /* PetInfoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7897BBE027C75580003CE1F2 /* PetInfoView.swift */; };
+		7897BC0927C8FD69003CE1F2 /* PageControlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7897BC0827C8FD69003CE1F2 /* PageControlView.swift */; };
+		789DABD227BCD6A400084742 /* FeedCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD127BCD6A400084742 /* FeedCell.swift */; };
 		789DABD427BCDB8200084742 /* SecondStepController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD327BCDB8200084742 /* SecondStepController.swift */; };
 		789DABD627BCE00900084742 /* ThirdPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD527BCE00900084742 /* ThirdPostController.swift */; };
 		789DABD827BD392700084742 /* FourthPostController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 789DABD727BD392700084742 /* FourthPostController.swift */; };
@@ -91,7 +96,12 @@
 		78131FD527B3A46B0003B9F8 /* RatingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
 		78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditOwnerProfileHeader.swift; sourceTree = "<group>"; };
 		786321EE27BCC55C0026D410 /* SteppedProgressBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SteppedProgressBar.swift; sourceTree = "<group>"; };
-		789DABD127BCD6A400084742 /* PostFeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostFeedCell.swift; sourceTree = "<group>"; };
+		7897BBD327C3F2F8003CE1F2 /* DetailFeedController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFeedController.swift; sourceTree = "<group>"; };
+		7897BBDB27C73EB6003CE1F2 /* DetailImageController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailImageController.swift; sourceTree = "<group>"; };
+		7897BBDE27C74AE3003CE1F2 /* DetailFeedFooter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailFeedFooter.swift; sourceTree = "<group>"; };
+		7897BBE027C75580003CE1F2 /* PetInfoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PetInfoView.swift; sourceTree = "<group>"; };
+		7897BC0827C8FD69003CE1F2 /* PageControlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageControlView.swift; sourceTree = "<group>"; };
+		789DABD127BCD6A400084742 /* FeedCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedCell.swift; sourceTree = "<group>"; };
 		789DABD327BCDB8200084742 /* SecondStepController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondStepController.swift; sourceTree = "<group>"; };
 		789DABD527BCE00900084742 /* ThirdPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdPostController.swift; sourceTree = "<group>"; };
 		789DABD727BD392700084742 /* FourthPostController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FourthPostController.swift; sourceTree = "<group>"; };
@@ -171,12 +181,10 @@
 			children = (
 				78131F8B27AD44B40003B9F8 /* Authentication */,
 				78080AEA27A831BF0043461C /* MainTapController.swift */,
-				78080AFA27A835A40043461C /* FeedController.swift */,
-				78080B0A27AA7F690043461C /* FilterController.swift */,
-				78080B0527AA61560043461C /* SearchController.swift */,
-				78080AFC27A835BE0043461C /* ReservationController.swift */,
+				7897BBD027C3D1EA003CE1F2 /* Feed */,
+				7897BBD127C3D339003CE1F2 /* Reservation */,
 				786321ED27BCC4D30026D410 /* Post */,
-				78080B0027A835DC0043461C /* ChatController.swift */,
+				7897BBD227C3D342003CE1F2 /* Chat */,
 				78131F5F27AC24580003B9F8 /* Profile */,
 				78A8EF1927B67F4F00B67C70 /* Review */,
 			);
@@ -186,7 +194,7 @@
 		78080B0927AA6A390043461C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				789DABD127BCD6A400084742 /* PostFeedCell.swift */,
+				7897BBDD27C74AC4003CE1F2 /* Feed */,
 				78A8EF1727B6759D00B67C70 /* PhotoCell.swift */,
 				7807962827C10C7000C0BF12 /* ServiceCell.swift */,
 				789DABDF27BEB4F200084742 /* Post */,
@@ -241,6 +249,7 @@
 				78A8EF1E27B7E30A00B67C70 /* MyPetCell.swift */,
 				78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */,
 				78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */,
+				7897BBE027C75580003CE1F2 /* PetInfoView.swift */,
 			);
 			path = Profile;
 			sourceTree = "<group>";
@@ -256,6 +265,44 @@
 				789DABDD27BE135200084742 /* LastPostController.swift */,
 			);
 			path = Post;
+			sourceTree = "<group>";
+		};
+		7897BBD027C3D1EA003CE1F2 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				78080AFA27A835A40043461C /* FeedController.swift */,
+				7897BBD327C3F2F8003CE1F2 /* DetailFeedController.swift */,
+				7897BBDB27C73EB6003CE1F2 /* DetailImageController.swift */,
+				78080B0A27AA7F690043461C /* FilterController.swift */,
+				78080B0527AA61560043461C /* SearchController.swift */,
+			);
+			path = Feed;
+			sourceTree = "<group>";
+		};
+		7897BBD127C3D339003CE1F2 /* Reservation */ = {
+			isa = PBXGroup;
+			children = (
+				78080AFC27A835BE0043461C /* ReservationController.swift */,
+			);
+			path = Reservation;
+			sourceTree = "<group>";
+		};
+		7897BBD227C3D342003CE1F2 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				78080B0027A835DC0043461C /* ChatController.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		7897BBDD27C74AC4003CE1F2 /* Feed */ = {
+			isa = PBXGroup;
+			children = (
+				789DABD127BCD6A400084742 /* FeedCell.swift */,
+				7897BBDE27C74AE3003CE1F2 /* DetailFeedFooter.swift */,
+				7897BC0827C8FD69003CE1F2 /* PageControlView.swift */,
+			);
+			path = Feed;
 			sourceTree = "<group>";
 		};
 		789DABDF27BEB4F200084742 /* Post */ = {
@@ -409,12 +456,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				789DABD427BCDB8200084742 /* SecondStepController.swift in Sources */,
-				789DABD227BCD6A400084742 /* PostFeedCell.swift in Sources */,
+				789DABD227BCD6A400084742 /* FeedCell.swift in Sources */,
 				78080AFF27A835CF0043461C /* FirstPostController.swift in Sources */,
 				78131F9927AF9D320003B9F8 /* EditPetProfileController.swift in Sources */,
 				78131F5E27ABFB990003B9F8 /* ProfileListCell.swift in Sources */,
 				78A8EF1627B6575400B67C70 /* AddReviewController.swift in Sources */,
 				786321EF27BCC55C0026D410 /* SteppedProgressBar.swift in Sources */,
+				7897BBDF27C74AE3003CE1F2 /* DetailFeedFooter.swift in Sources */,
 				789DABDE27BE135200084742 /* LastPostController.swift in Sources */,
 				789DABD627BCE00900084742 /* ThirdPostController.swift in Sources */,
 				78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */,
@@ -429,13 +477,16 @@
 				78131F9F27B0E8980003B9F8 /* OwnerProfileHeader.swift in Sources */,
 				78080B0B27AA7F690043461C /* FilterController.swift in Sources */,
 				78131F9D27AFB83F0003B9F8 /* LoginController.swift in Sources */,
+				7897BBDC27C73EB6003CE1F2 /* DetailImageController.swift in Sources */,
 				789DABE327BF63E000084742 /* FirstPostHeader.swift in Sources */,
 				78131F6127AC248C0003B9F8 /* OwnerProfileController.swift in Sources */,
 				78080AE727A831BF0043461C /* AppDelegate.swift in Sources */,
 				78A8EF2527B9747E00B67C70 /* FollowedPostCell.swift in Sources */,
+				7897BBE127C75580003CE1F2 /* PetInfoView.swift in Sources */,
 				789DABD827BD392700084742 /* FourthPostController.swift in Sources */,
 				789DABE127BEB52000084742 /* LastPostHeader.swift in Sources */,
 				78A8EF2727BA160A00B67C70 /* FollowedPostsController.swift in Sources */,
+				7897BBD427C3F2F8003CE1F2 /* DetailFeedController.swift in Sources */,
 				78A8EF2127B95CEF00B67C70 /* FollowedCaresController.swift in Sources */,
 				78131F8A27AD22320003B9F8 /* Utilities.swift in Sources */,
 				78131F9727AEAE150003B9F8 /* ReviewCell.swift in Sources */,
@@ -451,6 +502,7 @@
 				78131F8D27AD6E820003B9F8 /* PetProfileController.swift in Sources */,
 				78080B0627AA61560043461C /* SearchController.swift in Sources */,
 				78080AE927A831BF0043461C /* SceneDelegate.swift in Sources */,
+				7897BC0927C8FD69003CE1F2 /* PageControlView.swift in Sources */,
 				78A8EF1827B6759D00B67C70 /* PhotoCell.swift in Sources */,
 				78131F9527AEADF80003B9F8 /* ReviewsController.swift in Sources */,
 			);

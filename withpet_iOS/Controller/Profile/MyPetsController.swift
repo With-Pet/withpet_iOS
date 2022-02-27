@@ -25,7 +25,7 @@ class MyPetsController: UICollectionViewController {
     //MARK: - Configure
     func configureNavigationbar() {
         navigationController?.navigationBar.isHidden = false
-        navigationItem.title = "프로필"
+        navigationItem.title = "내 반려동물들"
         navigationController?.navigationBar.tintColor = .black
         navigationController?.navigationBar.barTintColor = .black
         navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "arrow.backward"), style: .plain, target: self, action: #selector(handleDismissal))
