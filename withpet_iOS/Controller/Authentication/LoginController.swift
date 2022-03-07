@@ -8,8 +8,14 @@
 import UIKit
 import KakaoSDKAuth
 import KakaoSDKUser
+import NaverThirdPartyLogin
+import GoogleSignIn
 
 class LoginController: UIViewController {
+    
+    private let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+    private let googleSignInConfig = GIDConfiguration.init(clientID: "516297221995-78bi44kk5tsa72u2t64ei6mi02m7cdh4.apps.googleusercontent.com")
+    
     
     private let imageView = UIImageView().then {
         $0.contentMode = .scaleAspectFit
@@ -22,13 +28,6 @@ class LoginController: UIViewController {
         $0.font = .boldSystemFont(ofSize: 25)
         $0.textAlignment = .left
         $0.textColor = .black
-    }
-    
-    private let orLabel = UILabel().then {
-        $0.text = "또는"
-        $0.font = .systemFont(ofSize: 14)
-        $0.textAlignment = .left
-        $0.textColor = .lightGray
     }
     
     private let introduceLabel = UILabel().then {
@@ -47,21 +46,30 @@ class LoginController: UIViewController {
     }
     
     private let kakaoLoginButton = UIButton().then {
-        $0.setImage(UIImage(named:"kakao_login_medium_wide"), for: .normal)
-        $0.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        $0.setImage(UIImage(named:"kakao_login_large_narrow"), for: .normal)
+        $0.addTarget(self, action: #selector(handleKakaoLogin), for: .touchUpInside)
+        $0.contentMode = .scaleAspectFit
     }
     
-    private let appleLoginButton = UIButton().then {
-        $0.backgroundColor = .black
-        $0.tintColor = .white
-        $0.setTitle("Sign up with Apple", for: .normal)
+    private let naverLoginButton = UIButton().then {
+        
         $0.setTitleColor(.white, for: .normal)
         $0.titleLabel?.font = .systemFont(ofSize: 19)
-        $0.setImage(UIImage(named:"Logo - SIWA - Left-aligned - White - Large"), for: .normal)
+        $0.setImage(UIImage(named:"btnG_완성형"), for: .normal)
         $0.layer.cornerRadius = 5
-        $0.addTarget(self, action: #selector(handleLogin), for: .touchUpInside)
+        $0.contentMode = .scaleAspectFit
+        $0.addTarget(self, action: #selector(handleNaverLogin), for: .touchUpInside)
     }
     
+    private let googleLoginButton = UIButton().then {
+        $0.setImage(UIImage(named:"btn_google_dark_normal_ios"), for: .normal)
+        $0.semanticContentAttribute = .forceLeftToRight
+        $0.titleLabel?.font = .systemFont(ofSize: 18)
+        $0.layer.cornerRadius = 5
+        $0.backgroundColor = UIColor.hexStringToUIColor("#4285F4")
+        $0.setTitle("Sign in with Google", for: .normal)
+        $0.addTarget(self, action: #selector(handleGoogleLogin), for: .touchUpInside)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -90,64 +98,125 @@ class LoginController: UIViewController {
         kakaoLoginButton.snp.makeConstraints { make in
             make.top.equalTo(introduceLabel.snp.bottom).offset(200)
             make.centerX.equalToSuperview()
-            make.width.equalTo(300)
-            make.height.equalTo(45)
+            make.width.equalTo(240)
+            make.height.equalTo(50)
         }
         
-        let leftLine = UIView()
-        leftLine.backgroundColor = .lightGray
-        
-        let rightLine = UIView()
-        rightLine.backgroundColor = .lightGray
-        
-        view.addSubview(orLabel)
-        orLabel.snp.makeConstraints { make in
+        view.addSubview(naverLoginButton)
+        naverLoginButton.snp.makeConstraints { make in
+            make.top.equalTo(kakaoLoginButton.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
-            make.top.equalTo(kakaoLoginButton.snp.bottom).offset(52)
+            make.width.equalTo(240)
+            make.height.equalTo(50)
         }
         
-        view.addSubview(leftLine)
-        leftLine.snp.makeConstraints { make in
-            make.width.equalTo(60)
-            make.height.equalTo(1)
-            make.centerY.equalTo(orLabel)
-            make.right.equalTo(orLabel.snp.left).offset(-45)
-        }
-        
-        view.addSubview(rightLine)
-        rightLine.snp.makeConstraints { make in
-            make.width.equalTo(60)
-            make.height.equalTo(1)
-            make.centerY.equalTo(orLabel)
-            make.left.equalTo(orLabel.snp.right).offset(45)
-        }
-        
-        view.addSubview(appleLoginButton)
-        appleLoginButton.snp.makeConstraints { make in
-            make.top.equalTo(orLabel.snp.bottom).offset(52)
+        view.addSubview(googleLoginButton)
+        googleLoginButton.snp.makeConstraints { make in
+            make.top.equalTo(naverLoginButton.snp.bottom).offset(20)
             make.centerX.equalToSuperview()
-            make.width.equalTo(300)
-            make.height.equalTo(45)
+            make.width.equalTo(240)
+            make.height.equalTo(50)
         }
     }
     
-    @objc func handleLogin() {
-
-        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+    @objc func handleKakaoLogin() {
+        if UserApi.isKakaoTalkLoginAvailable() {
+            loginWithApp()
+        } else {
+            loginWithWeb()
+        }
+    }
+    
+    @objc func handleNaverLogin(){
+        loginInstance?.delegate = self
+        loginInstance?.requestThirdPartyLogin()
+    }
+    
+    @objc func handleGoogleLogin(){
+        GIDSignIn.sharedInstance.signIn(with: googleSignInConfig, presenting: self) { [weak self] user,error in
+            guard error == nil else {
+                return
+            }
+            print(user?.userID)
+            self?.presentToMain()
+            
+        }
+    }
+    // 화면 전환 함수
+    func presentToMain() {
+        let nextVC = MainTapController()
+        nextVC.modalPresentationStyle = .fullScreen
+        self.present(nextVC, animated: true)
+    }
+    
+}
+//MARK: - KakaoLogin
+extension LoginController {
+    func loginWithApp(){
+        UserApi.shared.loginWithKakaoTalk {(_, error) in
             if let error = error {
                 print(error)
-            }
-            else {
-                print("loginWithKakaoAccount() success.")
-
-                //do something
-                let token = oauthToken
-                print(oauthToken)
-                let accessToken = oauthToken?.accessToken
-                print(accessToken)
-
+            } else {
+                print("loginWithKakaoTalk() success.")
+                
+                UserApi.shared.me {(user, error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        self.presentToMain()
+                    }
+                }
             }
         }
     }
+    
+    func loginWithWeb() {
+        UserApi.shared.loginWithKakaoAccount {(_, error) in
+            if let error = error {
+                print(error)
+            } else {
+                print("loginWithKakaoAccount() success.")
+                
+                UserApi.shared.me {(user, error) in
+                    if let error = error {
+                        print(error)
+                    } else {
+                        self.presentToMain()
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+//MARK: - NaverLogin
+extension LoginController : NaverThirdPartyLoginConnectionDelegate{
+    
+    //success loign
+    func oauth20ConnectionDidFinishRequestACTokenWithAuthCode() {
+        print("DEBUG : Success Naver Login")
+    }
+    
+    // refreshtoken
+    func oauth20ConnectionDidFinishRequestACTokenWithRefreshToken() {
+        
+    }
+    
+    // logout -> delegate token
+    func oauth20ConnectionDidFinishDeleteToken() {
+        
+    }
+    
+    // handle error
+    func oauth20Connection(_ oauthConnection: NaverThirdPartyLoginConnection!, didFailWithError error: Error!) {
+        print("DEBUG : \(error.localizedDescription)")
+    }
+    
+    
+}
+
+//MARK: - Google Login
+extension LoginController {
     
 }

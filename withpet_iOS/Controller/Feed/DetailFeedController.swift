@@ -38,6 +38,13 @@ class DetailFeedController: UIViewController {
             make.centerX.equalToSuperview()
             make.top.equalToSuperview().offset(20)
         }
+        
+        $0.addSubview(followingButton)
+        followingButton.snp.makeConstraints { make in
+            make.right.equalToSuperview().offset(-30)
+            make.centerY.equalTo(chatButton.snp.centerY)
+            make.width.height.equalTo(50)
+        }
     }
     
     private let chatButton = UIButton().then {
@@ -91,12 +98,6 @@ class DetailFeedController: UIViewController {
             make.width.height.equalTo(30)
         }
         
-        view.addSubview(followingButton)
-        followingButton.snp.makeConstraints { make in
-            make.width.height.equalTo(30)
-            make.centerY.equalTo(backButton)
-            make.trailing.equalToSuperview().offset(-20)
-        }
         view.addSubview(bottomContainterView)
         bottomContainterView.snp.makeConstraints { make in
             make.width.equalTo(440)
@@ -138,8 +139,6 @@ class DetailFeedController: UIViewController {
         collectionView.showsVerticalScrollIndicator = false
     }
     
-    
-    
     //MARK: - selector
     @objc func handleDismissal(){
         dismiss(animated: false, completion: nil)
@@ -167,7 +166,6 @@ class DetailFeedController: UIViewController {
 
 extension DetailFeedController : UICollectionViewDelegate {
     
-    
     func generateLayout() -> UICollectionViewLayout {
         
         let layout = UICollectionViewCompositionalLayout(sectionProvider: { (sectionIndex,layoutEnvironment:NSCollectionLayoutEnvironment) -> NSCollectionLayoutSection? in
@@ -192,16 +190,7 @@ extension DetailFeedController : UICollectionViewDelegate {
             
             let section = NSCollectionLayoutSection(group: group)
             section.boundarySupplementaryItems = [.init(layoutSize: .init(widthDimension: .fractionalWidth(1), heightDimension: .estimated(865)), elementKind: DetailFeedFooter.reuseIdentifier, alignment: .bottom)]
-            section.orthogonalScrollingBehavior = .paging
-            
-            section.visibleItemsInvalidationHandler = { [weak self] (items, offset, env) -> Void in
-                guard let self = self else { return }
-                
-                let page = round(offset.x / self.view.bounds.width)
-                
-                
-                self.pageInfoSubject.send(Int(page))
-            }
+            section.orthogonalScrollingBehavior = .groupPaging
             
             return section
         })

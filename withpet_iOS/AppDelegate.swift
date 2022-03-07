@@ -8,14 +8,37 @@
 import UIKit
 import KakaoSDKCommon
 import KakaoSDKAuth
+import NaverThirdPartyLogin
+import GoogleSignIn
+
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         
+        // Google
+        GIDSignIn.sharedInstance.restorePreviousSignIn { user,error in
+            if error != nil && user == nil {
+                
+            }
+        }
+        // Kakao
         KakaoSDK.initSDK(appKey: "c74219c31f29e94cfa4603d358d4100f")
         
+        // Naver
+        let naverInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+        
+        naverInstance?.isNaverAppOauthEnable = true
+        naverInstance?.isInAppOauthEnable = true
+        naverInstance?.isOnlyPortraitSupportedInIphone()
+        
+        naverInstance?.serviceUrlScheme = kServiceAppUrlScheme
+        naverInstance?.consumerKey = kConsumerKey
+        naverInstance?.consumerSecret = kConsumerSecret
+        naverInstance?.appName = kServiceAppName
+            
         if #available(iOS 15.0, *) {
             let navigationBarAppearance = UINavigationBarAppearance()
             navigationBarAppearance.configureWithOpaqueBackground()
@@ -42,12 +65,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: UISceneSession Lifecycle
     func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-            if (AuthApi.isKakaoTalkLoginUrl(url)) {
-                return AuthController.handleOpenUrl(url: url)
-            }
-
-            return false
+        
+        let handled = GIDSignIn.sharedInstance.handle(url)
+        if handled {
+            return true
         }
+        NaverThirdPartyLoginConnection.getSharedInstance()?.application(app, open: url, options: options)
+        if (AuthApi.isKakaoTalkLoginUrl(url)) {
+            return AuthController.handleOpenUrl(url: url)
+        }
+        
+        return false
+    }
     func application(_ application: UIApplication, configurationForConnecting connectingSceneSession: UISceneSession, options: UIScene.ConnectionOptions) -> UISceneConfiguration {
         // Called when a new scene session is being created.
         // Use this method to select a configuration to create the new scene with.
