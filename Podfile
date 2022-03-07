@@ -14,4 +14,6 @@ target 'withpet_iOS' do
   pod 'KakaoSDKCommon'  # 필수 요소를 담은 공통 모듈
   pod 'KakaoSDKAuth'  # 카카오 로그인
   pod 'KakaoSDKUser'
+  pod 'naveridlogin-sdk-ios'
+  pod 'GoogleSignIn'
 end

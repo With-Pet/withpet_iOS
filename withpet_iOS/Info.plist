@@ -13,11 +13,31 @@
 				<string>c74219c31f29e94cfa4603d358d4100f</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>withpet_ios</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>withpet_ios</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.516297221995-78bi44kk5tsa72u2t64ei6mi02m7cdh4</string>
+			</array>
+		</dict>
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>kakaokompassauth</string>
 		<string>kakaolink</string>
+		<string>naversearchapp</string>
+		<string>naversearchthirdlogin</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>
