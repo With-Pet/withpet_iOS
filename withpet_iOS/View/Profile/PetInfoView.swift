@@ -154,17 +154,7 @@ class PetInfoView: UIView {
             make.top.equalTo(weightInputLabel.snp.top)
             make.left.equalTo(sexInputLabel.snp.left)
         }
-        
-        let underLine = UIView()
-        underLine.backgroundColor = .lightGray
-        
-        addSubview(underLine)
-        underLine.snp.makeConstraints { make in
-            make.left.equalToSuperview().offset(10)
-            make.right.equalToSuperview().offset(-10)
-            make.height.equalTo(1)
-            make.bottom.equalToSuperview()
-        }
+
 
     }
     

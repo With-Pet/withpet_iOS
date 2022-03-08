@@ -121,7 +121,18 @@ class PetProfileController: UIViewController {
         petInfoView.snp.makeConstraints { make in
             make.left.right.equalToSuperview()
             make.top.equalTo(section1.snp.bottom)
-            make.height.equalTo(210)
+            make.height.equalTo(170)
+        }
+        
+        let section2 = UIView()
+        section2.backgroundColor = .lightGray
+        
+        view.addSubview(section2)
+        section2.snp.makeConstraints { make in
+            make.top.equalTo(petInfoView.snp.bottom)
+            make.left.equalToSuperview().offset(10)
+            make.right.equalToSuperview().offset(-10)
+            make.height.equalTo(1)
         }
         
         view.addSubview(section2TitleLabel)
