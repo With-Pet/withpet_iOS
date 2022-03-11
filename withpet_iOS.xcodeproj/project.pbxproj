@@ -59,11 +59,15 @@
 		78A8EF2327B95D1700B67C70 /* FollowedCareCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */; };
 		78A8EF2527B9747E00B67C70 /* FollowedPostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */; };
 		78A8EF2727BA160A00B67C70 /* FollowedPostsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78A8EF2627BA160A00B67C70 /* FollowedPostsController.swift */; };
-		A881FCD7F1CD861940790D92 /* Pods_withpet_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */; };
+		7E91CB54F522D0BA35DCEAB7 /* Pods_withpet_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B441DAFDC1155634C27278DD /* Pods_withpet_iOS.framework */; };
+		E40A521127D7125800683402 /* ReservationFilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A521027D7125800683402 /* ReservationFilterView.swift */; };
+		E40A521327D7132000683402 /* ReservationFilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A521227D7132000683402 /* ReservationFilterCell.swift */; };
+		E40A521527D7200A00683402 /* ReservationCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A521427D7200A00683402 /* ReservationCell.swift */; };
+		E40A521727D724B100683402 /* ReservationStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A521627D724B100683402 /* ReservationStateView.swift */; };
+		E40A521927D77C5D00683402 /* ReservationDetailController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E40A521827D77C5D00683402 /* ReservationDetailController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		098C467463A208CD2D8C99E8 /* Pods-withpet_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.debug.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.debug.xcconfig"; sourceTree = "<group>"; };
 		7807962827C10C7000C0BF12 /* ServiceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceCell.swift; sourceTree = "<group>"; };
 		78080AE327A831BF0043461C /* withpet_iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = withpet_iOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		78080AE627A831BF0043461C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -118,8 +122,14 @@
 		78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedCareCell.swift; sourceTree = "<group>"; };
 		78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedPostCell.swift; sourceTree = "<group>"; };
 		78A8EF2627BA160A00B67C70 /* FollowedPostsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowedPostsController.swift; sourceTree = "<group>"; };
-		B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_withpet_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		B999708DD4F9F15E78E5B7B3 /* Pods-withpet_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.release.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		AE307F82F9C26EC5BBCEF1BB /* Pods-withpet_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.release.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.release.xcconfig"; sourceTree = "<group>"; };
+		B441DAFDC1155634C27278DD /* Pods_withpet_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_withpet_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C4D8BE23D36A3653059FC8FB /* Pods-withpet_iOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-withpet_iOS.debug.xcconfig"; path = "Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS.debug.xcconfig"; sourceTree = "<group>"; };
+		E40A521027D7125800683402 /* ReservationFilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationFilterView.swift; sourceTree = "<group>"; };
+		E40A521227D7132000683402 /* ReservationFilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationFilterCell.swift; sourceTree = "<group>"; };
+		E40A521427D7200A00683402 /* ReservationCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationCell.swift; sourceTree = "<group>"; };
+		E40A521627D724B100683402 /* ReservationStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationStateView.swift; sourceTree = "<group>"; };
+		E40A521827D77C5D00683402 /* ReservationDetailController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationDetailController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,7 +137,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A881FCD7F1CD861940790D92 /* Pods_withpet_iOS.framework in Frameworks */,
+				7E91CB54F522D0BA35DCEAB7 /* Pods_withpet_iOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -137,10 +147,18 @@
 		2DF36E5F729F0770B00170F9 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				098C467463A208CD2D8C99E8 /* Pods-withpet_iOS.debug.xcconfig */,
-				B999708DD4F9F15E78E5B7B3 /* Pods-withpet_iOS.release.xcconfig */,
+				C4D8BE23D36A3653059FC8FB /* Pods-withpet_iOS.debug.xcconfig */,
+				AE307F82F9C26EC5BBCEF1BB /* Pods-withpet_iOS.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		49FA571F9122094EC07549B8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B441DAFDC1155634C27278DD /* Pods_withpet_iOS.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		78080ADA27A831BF0043461C = {
@@ -149,7 +167,7 @@
 				78080AE527A831BF0043461C /* withpet_iOS */,
 				78080AE427A831BF0043461C /* Products */,
 				2DF36E5F729F0770B00170F9 /* Pods */,
-				F5CDC302377CE6D4959A56FA /* Frameworks */,
+				49FA571F9122094EC07549B8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -197,6 +215,7 @@
 				7897BBDD27C74AC4003CE1F2 /* Feed */,
 				78A8EF1727B6759D00B67C70 /* PhotoCell.swift */,
 				7807962827C10C7000C0BF12 /* ServiceCell.swift */,
+				E40A520F27D7115A00683402 /* Reservation */,
 				789DABDF27BEB4F200084742 /* Post */,
 				78A8EF2A27BA78F300B67C70 /* Review */,
 				78131FCA27B194760003B9F8 /* Profile */,
@@ -244,9 +263,9 @@
 				78131F5D27ABFB990003B9F8 /* ProfileListCell.swift */,
 				78131F9E27B0E8980003B9F8 /* OwnerProfileHeader.swift */,
 				78131FD327B2911C0003B9F8 /* OnwerProfileFooter.swift */,
+				78A8EF1E27B7E30A00B67C70 /* MyPetCell.swift */,
 				78131F6527AC39A40003B9F8 /* CertificationCell.swift */,
 				78131FD727B4F7ED0003B9F8 /* EditOwnerProfileHeader.swift */,
-				78A8EF1E27B7E30A00B67C70 /* MyPetCell.swift */,
 				78A8EF2227B95D1700B67C70 /* FollowedCareCell.swift */,
 				78A8EF2427B9747E00B67C70 /* FollowedPostCell.swift */,
 				7897BBE027C75580003CE1F2 /* PetInfoView.swift */,
@@ -283,6 +302,7 @@
 			isa = PBXGroup;
 			children = (
 				78080AFC27A835BE0043461C /* ReservationController.swift */,
+				E40A521827D77C5D00683402 /* ReservationDetailController.swift */,
 			);
 			path = Reservation;
 			sourceTree = "<group>";
@@ -333,12 +353,15 @@
 			path = Review;
 			sourceTree = "<group>";
 		};
-		F5CDC302377CE6D4959A56FA /* Frameworks */ = {
+		E40A520F27D7115A00683402 /* Reservation */ = {
 			isa = PBXGroup;
 			children = (
-				B8BA771D41A1C0A8D7041F44 /* Pods_withpet_iOS.framework */,
+				E40A521027D7125800683402 /* ReservationFilterView.swift */,
+				E40A521227D7132000683402 /* ReservationFilterCell.swift */,
+				E40A521427D7200A00683402 /* ReservationCell.swift */,
+				E40A521627D724B100683402 /* ReservationStateView.swift */,
 			);
-			name = Frameworks;
+			path = Reservation;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -348,11 +371,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 78080AF727A831C20043461C /* Build configuration list for PBXNativeTarget "withpet_iOS" */;
 			buildPhases = (
-				E11F774CA2FC3B9A52CA4E6D /* [CP] Check Pods Manifest.lock */,
+				5D0304010430C74838FA17DF /* [CP] Check Pods Manifest.lock */,
 				78080ADF27A831BF0043461C /* Sources */,
 				78080AE027A831BF0043461C /* Frameworks */,
 				78080AE127A831BF0043461C /* Resources */,
-				C166555B969082F4339B4E91 /* [CP] Embed Pods Frameworks */,
+				4550982A8D0D6FBBFDF64B66 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -409,7 +432,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C166555B969082F4339B4E91 /* [CP] Embed Pods Frameworks */ = {
+		4550982A8D0D6FBBFDF64B66 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -426,7 +449,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-withpet_iOS/Pods-withpet_iOS-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		E11F774CA2FC3B9A52CA4E6D /* [CP] Check Pods Manifest.lock */ = {
+		5D0304010430C74838FA17DF /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -467,14 +490,17 @@
 				789DABD627BCE00900084742 /* ThirdPostController.swift in Sources */,
 				78131FD627B3A46B0003B9F8 /* RatingView.swift in Sources */,
 				78131F6627AC39A40003B9F8 /* CertificationCell.swift in Sources */,
+				E40A521127D7125800683402 /* ReservationFilterView.swift in Sources */,
 				78131FD427B2911C0003B9F8 /* OnwerProfileFooter.swift in Sources */,
 				7807962927C10C7000C0BF12 /* ServiceCell.swift in Sources */,
 				78A8EF1D27B7E2D600B67C70 /* MyPetsController.swift in Sources */,
 				78080AFD27A835BE0043461C /* ReservationController.swift in Sources */,
 				78080AEB27A831BF0043461C /* MainTapController.swift in Sources */,
 				78080B0127A835DC0043461C /* ChatController.swift in Sources */,
+				E40A521927D77C5D00683402 /* ReservationDetailController.swift in Sources */,
 				78A8EF2327B95D1700B67C70 /* FollowedCareCell.swift in Sources */,
 				78131F9F27B0E8980003B9F8 /* OwnerProfileHeader.swift in Sources */,
+				E40A521727D724B100683402 /* ReservationStateView.swift in Sources */,
 				78080B0B27AA7F690043461C /* FilterController.swift in Sources */,
 				78131F9D27AFB83F0003B9F8 /* LoginController.swift in Sources */,
 				7897BBDC27C73EB6003CE1F2 /* DetailImageController.swift in Sources */,
@@ -484,6 +510,7 @@
 				78A8EF2527B9747E00B67C70 /* FollowedPostCell.swift in Sources */,
 				7897BBE127C75580003CE1F2 /* PetInfoView.swift in Sources */,
 				789DABD827BD392700084742 /* FourthPostController.swift in Sources */,
+				E40A521327D7132000683402 /* ReservationFilterCell.swift in Sources */,
 				789DABE127BEB52000084742 /* LastPostHeader.swift in Sources */,
 				78A8EF2727BA160A00B67C70 /* FollowedPostsController.swift in Sources */,
 				7897BBD427C3F2F8003CE1F2 /* DetailFeedController.swift in Sources */,
@@ -504,6 +531,7 @@
 				78080AE927A831BF0043461C /* SceneDelegate.swift in Sources */,
 				7897BC0927C8FD69003CE1F2 /* PageControlView.swift in Sources */,
 				78A8EF1827B6759D00B67C70 /* PhotoCell.swift in Sources */,
+				E40A521527D7200A00683402 /* ReservationCell.swift in Sources */,
 				78131F9527AEADF80003B9F8 /* ReviewsController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -559,6 +587,8 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				EXCLUDED_ARCHS = arm64;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -620,6 +650,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				EXCLUDED_ARCHS = arm64;
+				"EXCLUDED_ARCHS[sdk=*]" = arm64;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -631,6 +663,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
@@ -640,7 +673,7 @@
 		};
 		78080AF827A831C20043461C /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 098C467463A208CD2D8C99E8 /* Pods-withpet_iOS.debug.xcconfig */;
+			baseConfigurationReference = C4D8BE23D36A3653059FC8FB /* Pods-withpet_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -664,12 +697,13 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
 		78080AF927A831C20043461C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = B999708DD4F9F15E78E5B7B3 /* Pods-withpet_iOS.release.xcconfig */;
+			baseConfigurationReference = AE307F82F9C26EC5BBCEF1BB /* Pods-withpet_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -688,11 +722,13 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.doyun.withpet-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
 		};
